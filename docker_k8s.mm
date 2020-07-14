@@ -50,7 +50,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1593757155400" FOLDED="true" ID="ID_852976034" MODIFIED="1594689913225" TEXT="install">
+<node CREATED="1593757155400" FOLDED="true" ID="ID_852976034" MODIFIED="1594695404103" TEXT="install">
 <node CREATED="1594267696057" ID="ID_1772600583" MODIFIED="1594689849140" TEXT="docker keywords">
 <node CREATED="1594273076758" ID="ID_1732150930" MODIFIED="1594689849141" TEXT="compose">
 <node CREATED="1594273089670" ID="ID_514880015" MODIFIED="1594273093139" TEXT="client"/>
@@ -122,7 +122,7 @@
 <node CREATED="1593757265272" ID="ID_522187683" MODIFIED="1593757266421" TEXT="DockerToolbox-18.03.0-ce.exe"/>
 </node>
 </node>
-<node CREATED="1594263226672" FOLDED="true" ID="ID_1772577560" MODIFIED="1594689911370" TEXT="command">
+<node CREATED="1594263226672" ID="ID_1772577560" MODIFIED="1594695405320" TEXT="command">
 <node CREATED="1594277865247" HGAP="23" ID="ID_973607559" MODIFIED="1594689786453" TEXT="principle" VSHIFT="1">
 <node CREATED="1594277931559" ID="ID_202033380" MODIFIED="1594277932276" TEXT="cs">
 <node CREATED="1594277933431" ID="ID_1224340265" MODIFIED="1594277939612" TEXT="client"/>
@@ -301,6 +301,7 @@
 <node CREATED="1594287433729" ID="ID_1447432373" MODIFIED="1594287484475" TEXT="docker rmi -f $(docker images -aq)"/>
 </node>
 <node CREATED="1594622198275" ID="ID_1536912642" MODIFIED="1594622209791" TEXT="docker build"/>
+<node CREATED="1594695409465" ID="ID_1258475450" MODIFIED="1594695412758" TEXT="docker history"/>
 </node>
 <node CREATED="1594279021191" ID="ID_735536407" MODIFIED="1594612959980" TEXT="container">
 <node CREATED="1594287724233" ID="ID_497355912" MODIFIED="1594287730454" TEXT="docker run">
@@ -580,7 +581,7 @@
 </node>
 </node>
 <node CREATED="1594371222650" ID="ID_481629223" MODIFIED="1594371478647" TEXT="essence">
-<node CREATED="1594263241143" ID="ID_861950279" MODIFIED="1594691110105" TEXT="container volume">
+<node CREATED="1594263241143" FOLDED="true" ID="ID_861950279" MODIFIED="1594695397160" TEXT="container volume">
 <node CREATED="1594371562850" ID="ID_90884683" MODIFIED="1594371620103" TEXT="&#x5c06;&#x5e94;&#x7528;&#x548c;&#x73af;&#x5883;&#x6253;&#x5305;&#x6210;&#x4e00;&#x4e2a;image&#xff0c;run image&#x6210;container">
 <node CREATED="1594371639402" ID="ID_1184460187" MODIFIED="1594371651415" TEXT="&#x6570;&#x636e;&#x4e0d;&#x80fd;&#x5728;container&#x91cc;"/>
 <node CREATED="1594371659090" ID="ID_241366097" MODIFIED="1594371668206" TEXT="&#x6570;&#x636e;&#x53ef;&#x4ee5;&#x6301;&#x4e45;&#x5316;"/>
@@ -752,6 +753,9 @@
 <node CREATED="1594690073724" ID="ID_1642431369" MODIFIED="1594690076974" TEXT="&#x57fa;&#x7840;&#x955c;&#x50cf;&#x4fe1;&#x606f;">
 <node CREATED="1594690076976" ID="ID_644084911" MODIFIED="1594690080601" TEXT="FROM">
 <node CREATED="1594690687100" ID="ID_983862356" MODIFIED="1594690708393" TEXT="&#x6307;&#x5b9a;&#x57fa;&#x7840;&#x955c;&#x50cf;"/>
+<node CREATED="1594691342110" ID="ID_206637919" MODIFIED="1594691354168" TEXT="FROM scratch">
+<node CREATED="1594691355156" ID="ID_914754426" MODIFIED="1594691364448" TEXT="99% from scratch"/>
+</node>
 </node>
 </node>
 <node CREATED="1594690093309" ID="ID_164077188" MODIFIED="1594690094312" TEXT="&#x7ef4;&#x62a4;&#x8005;&#x4fe1;&#x606f;">
@@ -801,7 +805,419 @@
 </node>
 </node>
 <node CREATED="1594621738540" ID="ID_594151918" MODIFIED="1594690987179" TEXT="practice">
-<node CREATED="1594689415284" ID="ID_1628809615" MODIFIED="1594689448746" TEXT="centos01">
+<node CREATED="1594692413553" ID="ID_241701441" MODIFIED="1594692445976" TEXT="centos">
+<node CREATED="1594695256850" ID="ID_905728028" MODIFIED="1594695264731" TEXT="build 0.1.0">
+<node CREATED="1594692420289" FOLDED="true" ID="ID_554560246" MODIFIED="1594692691431" TEXT="write dockerfile">
+<node CREATED="1594692429529" ID="ID_1517184169" MODIFIED="1594692442961">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      FROM centos
+    </p>
+    <p>
+      MAINTAINER david.way&lt;david.wei@ebaotech.com&gt;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ENV MY_PATH /user/local
+    </p>
+    <p>
+      ENV EXPOSE_PORT 80
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      WORKDIR $MY_PATH
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      RUN yum -y install vim
+    </p>
+    <p>
+      RUN yum -y install net-tools
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      EXPOSE $EXPOSE_PORT
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      CMD echo $MY_PATH
+    </p>
+    <p>
+      CMD echo &quot;----END----&quot;
+    </p>
+    <p>
+      CMD /bin/bash
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1594692452274" ID="ID_895976056" MODIFIED="1594692455734" TEXT="build">
+<node CREATED="1594692456649" FOLDED="true" ID="ID_57228239" MODIFIED="1594692891215" TEXT="docker build -f dockerfile_centos -t mycentos:0.1 .">
+<node CREATED="1594692472193" ID="ID_864280447" MODIFIED="1594692870570">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Sending build context to Docker daemon&#160;&#160;3.072kB
+    </p>
+    <p>
+      Step 1/11 : FROM centos
+    </p>
+    <p>
+      &#160;---&gt; 831691599b88
+    </p>
+    <p>
+      Step 2/11 : MAINTAINER david.way&lt;david.wei@ebaotech.com&gt;
+    </p>
+    <p>
+      &#160;---&gt; Running in 1a82f12be053
+    </p>
+    <p>
+      Removing intermediate container 1a82f12be053
+    </p>
+    <p>
+      &#160;---&gt; 9085df2def75
+    </p>
+    <p>
+      Step 3/11 : ENV MY_PATH /user/local
+    </p>
+    <p>
+      &#160;---&gt; Running in 1d5ed693ffa7
+    </p>
+    <p>
+      Removing intermediate container 1d5ed693ffa7
+    </p>
+    <p>
+      &#160;---&gt; 328b3879c690
+    </p>
+    <p>
+      Step 4/11 : ENV EXPOSE_PORT 80
+    </p>
+    <p>
+      &#160;---&gt; Running in c8adceb476c9
+    </p>
+    <p>
+      Removing intermediate container c8adceb476c9
+    </p>
+    <p>
+      &#160;---&gt; 47614cc59b82
+    </p>
+    <p>
+      Step 5/11 : WORKDIR $MY_PATH
+    </p>
+    <p>
+      &#160;---&gt; Running in bc4819ce2aa1
+    </p>
+    <p>
+      Removing intermediate container bc4819ce2aa1
+    </p>
+    <p>
+      &#160;---&gt; bea122bc3130
+    </p>
+    <p>
+      Step 6/11 : RUN yum -y install vim
+    </p>
+    <p>
+      &#160;---&gt; Running in c46039d3d55f
+    </p>
+    <p>
+      CentOS-8 - AppStream
+    </p>
+    <p>
+      .
+    </p>
+    <p>
+      .
+    </p>
+    <p>
+      .
+    </p>
+    <p>
+      Installed:
+    </p>
+    <p>
+      &#160;&#160;net-tools-2.0-0.51.20160912git.el8.x86_64&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Complete!
+    </p>
+    <p>
+      Removing intermediate container 848bca900638
+    </p>
+    <p>
+      &#160;---&gt; bd3e1ac13c09
+    </p>
+    <p>
+      Step 8/11 : EXPOSE $EXPOSE_PORT
+    </p>
+    <p>
+      &#160;---&gt; Running in b5306c9875d7
+    </p>
+    <p>
+      Removing intermediate container b5306c9875d7
+    </p>
+    <p>
+      &#160;---&gt; bb9fca4af564
+    </p>
+    <p>
+      Step 9/11 : CMD echo $MY_PATH
+    </p>
+    <p>
+      &#160;---&gt; Running in 70da4d230c98
+    </p>
+    <p>
+      Removing intermediate container 70da4d230c98
+    </p>
+    <p>
+      &#160;---&gt; f8d3c9a1848f
+    </p>
+    <p>
+      Step 10/11 : CMD echo &quot;----END----&quot;
+    </p>
+    <p>
+      &#160;---&gt; Running in 5c0039aa497f
+    </p>
+    <p>
+      Removing intermediate container 5c0039aa497f
+    </p>
+    <p>
+      &#160;---&gt; 6e17dca5f142
+    </p>
+    <p>
+      Step 11/11 : CMD /bin/bash
+    </p>
+    <p>
+      &#160;---&gt; Running in c714f74fd963
+    </p>
+    <p>
+      Removing intermediate container c714f74fd963
+    </p>
+    <p>
+      &#160;---&gt; 1c7628058e6d
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Successfully built 1c7628058e6d
+    </p>
+    <p>
+      Successfully tagged mycentos:0.1
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594692693642" ID="ID_356164014" MODIFIED="1594692898286" TEXT="run">
+<node CREATED="1594692699931" ID="ID_233501274" MODIFIED="1594692701039" TEXT="docker run -it -d mycentos:0.1 /bin/bash"/>
+</node>
+</node>
+<node CREATED="1594692707346" ID="ID_544840050" MODIFIED="1594695284262" TEXT="commit 0.1.1">
+<node CREATED="1594692716332" ID="ID_1922341515" MODIFIED="1594692746996" TEXT="docker exec -it 2f /bin/bash"/>
+<node CREATED="1594692754954" ID="ID_729082980" MODIFIED="1594692756414" TEXT="pwd"/>
+<node CREATED="1594692757842" ID="ID_95983473" MODIFIED="1594692760246" TEXT="ifconfig"/>
+<node CREATED="1594692761682" ID="ID_277918479" MODIFIED="1594692766478" TEXT="vim --version"/>
+<node CREATED="1594694192145" ID="ID_58508802" MODIFIED="1594694195550" TEXT="ll">
+<node CREATED="1594694196457" ID="ID_874820806" MODIFIED="1594694241686" TEXT="vim ~/.bashrc">
+<node CREATED="1594694207322" ID="ID_1694757536" MODIFIED="1594694212112">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # You may uncomment the following lines if you want `ls' to be colorized:
+    </p>
+    <p>
+      export LS_OPTIONS='--color=auto'
+    </p>
+    <p>
+      alias ls='ls $LS_OPTIONS'
+    </p>
+    <p>
+      alias ll='ls $LS_OPTIONS -l'
+    </p>
+    <p>
+      alias l='ls $LS_OPTIONS -lA'
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1594694217441" ID="ID_1107495811" MODIFIED="1594694225454" TEXT="source ./bashrc"/>
+</node>
+<node CREATED="1594695239666" ID="ID_752145866" MODIFIED="1594695243934" TEXT="docker commit -m &quot;add ll&quot; 2f mycentos:0.1.1"/>
+</node>
+<node CREATED="1594695078729" ID="ID_1117652640" MODIFIED="1594695094278" TEXT="build 0.2.0">
+<node CREATED="1594695111321" ID="ID_996357245" MODIFIED="1594695120485" TEXT="write">
+<node CREATED="1594695095545" ID="ID_1672465503" MODIFIED="1594695106836">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      FROM mycentos:0.1.1
+    </p>
+    <p>
+      VOLUME [&quot;mycentos&quot;]
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      CMD echo &quot;----END----&quot;
+    </p>
+    <p>
+      CMD /bin/bash
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1594695124257" ID="ID_434474896" MODIFIED="1594695127621" TEXT="build">
+<node CREATED="1594695128376" ID="ID_995701241" MODIFIED="1594695147286" TEXT="docker build -f dockerfile_centos -t mycentos:0.2.0 . "/>
+</node>
+<node CREATED="1594695149162" ID="ID_942155227" MODIFIED="1594695152406" TEXT="run">
+<node CREATED="1594695160618" ID="ID_71960055" MODIFIED="1594695161438" TEXT="docker run -itd mycentos:0.2.0"/>
+</node>
+</node>
+<node CREATED="1594695361361" ID="ID_875485755" MODIFIED="1594695365390" TEXT="docker history mycentos:0.2.0">
+<node CREATED="1594695366826" ID="ID_640717647" MODIFIED="1594695385131">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker history mycentos:0.2.0
+    </p>
+    <p>
+      IMAGE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CREATED&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CREATED BY&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SIZE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;COMMENT
+    </p>
+    <p>
+      1043cee314fd&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;6 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;/bin&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      6ac33c57e4f4&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;6 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;echo&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      0740016f371b&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;6 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;VOLUME [mycentos]&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      f0ad54274675&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;16 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/bash&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;5.49kB&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;add ll
+    </p>
+    <p>
+      1c7628058e6d&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;53 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;/bin&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      6e17dca5f142&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;53 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;echo&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      f8d3c9a1848f&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;53 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/sh&quot; &quot;-c&quot; &quot;echo&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      bb9fca4af564&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;53 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;EXPOSE 80&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      bd3e1ac13c09&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;53 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c yum -y install net-tools&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;22.7MB&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      45dfd5ffb90f&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;54 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c yum -y install vim&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;57.2MB&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      bea122bc3130&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;55 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop) WORKDIR /user/local&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      47614cc59b82&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;55 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;ENV EXPOSE_PORT=80&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      328b3879c690&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;55 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;ENV MY_PATH=/user/local&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      9085df2def75&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;55 minutes ago&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;MAINTAINER david.way&lt;davi&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      831691599b88&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 weeks ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;CMD [&quot;/bin/bash&quot;]&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &lt;missing&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 weeks ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop)&#160;&#160;LABEL org.label-schema.sc&#8230;&#160;&#160;&#160;0B&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &lt;missing&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3 weeks ago&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/bin/sh -c #(nop) ADD file:84700c11fcc969ac0&#8230;&#160;&#160;&#160;215MB
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594691273795" FOLDED="true" ID="ID_1139203774" MODIFIED="1594692921031" TEXT="centos official">
+<node CREATED="1594691304556" ID="ID_969740676" MODIFIED="1594691306782" TEXT="https://github.com/CentOS/sig-cloud-instance-images/blob/5125788a241618b4d37254050d0bddcbd5b7df33/docker/Dockerfile"/>
+<node CREATED="1594691286172" ID="ID_1993123233" MODIFIED="1594691335475">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      FROM scratch
+    </p>
+    <p>
+      ADD centos-8-x86_64.tar.xz /
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      LABEL org.label-schema.schema-version=&quot;1.0&quot; \
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;org.label-schema.name=&quot;CentOS Base Image&quot; \
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;org.label-schema.vendor=&quot;CentOS&quot; \
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;org.label-schema.license=&quot;GPLv2&quot; \
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;org.label-schema.build-date=&quot;20200611&quot;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      CMD [&quot;/bin/bash&quot;]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1594689415284" FOLDED="true" ID="ID_1628809615" MODIFIED="1594692923039" TEXT="centos simple">
 <node CREATED="1594621743452" ID="ID_153642879" MODIFIED="1594621915714">
 <richcontent TYPE="NODE"><html>
   <head>
