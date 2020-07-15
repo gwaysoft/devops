@@ -1,12 +1,25 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1593756866707" ID="ID_152132444" MODIFIED="1594689852345" TEXT="docker &amp; k8s">
-<node CREATED="1593757145152" ID="ID_75884518" MODIFIED="1594689855941" POSITION="right" TEXT="docker">
+<node CREATED="1593757145152" ID="ID_75884518" MODIFIED="1594712899147" POSITION="right" TEXT="docker">
+<node CREATED="1594712899147" FOLDED="true" ID="ID_1867584067" MODIFIED="1594714141165" TEXT="overview">
+<node CREATED="1594712902451" ID="ID_7735921" MODIFIED="1594712922779">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="docker_k8s_pic/docker.overview.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 <node CREATED="1594263203950" ID="ID_995758107" MODIFIED="1594263206036" TEXT="level">
-<node CREATED="1594263213560" ID="ID_293283256" MODIFIED="1594263214572" TEXT="start">
+<node CREATED="1594263213560" ID="ID_293283256" MODIFIED="1594712953632" TEXT="start">
 <node CREATED="1594262130190" ID="ID_497588849" MODIFIED="1594263434756" TEXT="https://www.bilibili.com/video/BV1og4y1q7M4"/>
 <node CREATED="1594371260834" ID="ID_1371839198" MODIFIED="1594689585844" TEXT="basic">
-<node CREATED="1594263636225" FOLDED="true" ID="ID_1558924427" MODIFIED="1594689915193" TEXT="docker introduction">
+<node CREATED="1594263636225" FOLDED="true" ID="ID_1558924427" MODIFIED="1594714131262" TEXT="docker introduction">
 <node CREATED="1594264929432" ID="ID_1655934955" MODIFIED="1594264934298" TEXT="devops">
 <node CREATED="1594263740929" ID="ID_1479112237" MODIFIED="1594264399387" TEXT="development as a operation"/>
 <node CREATED="1594268377746" ID="ID_275883321" MODIFIED="1594268407390" TEXT="&#x5e94;&#x7528;&#x66f4;&#x5feb;&#x901f;&#x7684;&#x4ea4;&#x4ed8;&#x548c;&#x90e8;&#x7f72;"/>
@@ -50,7 +63,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1593757155400" FOLDED="true" ID="ID_852976034" MODIFIED="1594695404103" TEXT="install">
+<node CREATED="1593757155400" ID="ID_852976034" MODIFIED="1594714137922" TEXT="install">
 <node CREATED="1594267696057" ID="ID_1772600583" MODIFIED="1594689849140" TEXT="docker keywords">
 <node CREATED="1594273076758" ID="ID_1732150930" MODIFIED="1594689849141" TEXT="compose">
 <node CREATED="1594273089670" ID="ID_514880015" MODIFIED="1594273093139" TEXT="client"/>
@@ -122,7 +135,7 @@
 <node CREATED="1593757265272" ID="ID_522187683" MODIFIED="1593757266421" TEXT="DockerToolbox-18.03.0-ce.exe"/>
 </node>
 </node>
-<node CREATED="1594263226672" ID="ID_1772577560" MODIFIED="1594695405320" TEXT="command">
+<node CREATED="1594263226672" ID="ID_1772577560" MODIFIED="1594785247657" TEXT="command">
 <node CREATED="1594277865247" HGAP="23" ID="ID_973607559" MODIFIED="1594689786453" TEXT="principle" VSHIFT="1">
 <node CREATED="1594277931559" ID="ID_202033380" MODIFIED="1594277932276" TEXT="cs">
 <node CREATED="1594277933431" ID="ID_1224340265" MODIFIED="1594277939612" TEXT="client"/>
@@ -137,8 +150,8 @@
 <node CREATED="1594277694168" ID="ID_1637307703" MODIFIED="1594277759356" TEXT="start -&gt; search local image -&gt; search at docker hub -&gt; download -&gt; run"/>
 </node>
 </node>
-<node CREATED="1594278549200" ID="ID_664848668" MODIFIED="1594350397378" TEXT="command">
-<node CREATED="1594350405637" ID="ID_1288805954" MODIFIED="1594689790427" TEXT="">
+<node CREATED="1594278549200" ID="ID_664848668" MODIFIED="1594711242902" TEXT="command">
+<node CREATED="1594350405637" ID="ID_1288805954" MODIFIED="1594714166573" TEXT="overview">
 <node CREATED="1594350506437" ID="ID_298960023" MODIFIED="1594350517137">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -150,7 +163,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1594278556895" ID="ID_575454124" MODIFIED="1594289103414" TEXT="help">
+<node CREATED="1594278556895" ID="ID_575454124" MODIFIED="1594785251343" TEXT="help">
 <node CREATED="1594278817119" ID="ID_740241178" MODIFIED="1594350736005" TEXT="https://docs.docker.com/engine/reference/commandline/docker/">
 <font NAME="SansSerif" SIZE="12"/>
 </node>
@@ -159,7 +172,7 @@
 <node CREATED="1594278573639" ID="ID_1537390627" MODIFIED="1594278586564" TEXT="docker --help"/>
 <node CREATED="1594278996350" ID="ID_651682779" MODIFIED="1594279001708" TEXT="docker run --help"/>
 </node>
-<node CREATED="1594279017559" ID="ID_480325369" MODIFIED="1594288761122" TEXT="image">
+<node CREATED="1594279017559" ID="ID_480325369" MODIFIED="1594713187672" TEXT="image">
 <node CREATED="1594279046919" ID="ID_1250489734" MODIFIED="1594279050844" TEXT="docker images"/>
 <node CREATED="1594279365223" ID="ID_1413816831" MODIFIED="1594285780908" TEXT="docker search">
 <node CREATED="1594285781854" ID="ID_438948626" MODIFIED="1594285782659" TEXT="web">
@@ -303,7 +316,7 @@
 <node CREATED="1594622198275" ID="ID_1536912642" MODIFIED="1594622209791" TEXT="docker build"/>
 <node CREATED="1594695409465" ID="ID_1258475450" MODIFIED="1594695412758" TEXT="docker history"/>
 </node>
-<node CREATED="1594279021191" ID="ID_735536407" MODIFIED="1594612959980" TEXT="container">
+<node CREATED="1594279021191" ID="ID_735536407" MODIFIED="1594714205795" TEXT="container">
 <node CREATED="1594287724233" ID="ID_497355912" MODIFIED="1594287730454" TEXT="docker run">
 <node CREATED="1594287795025" ID="ID_513468834" MODIFIED="1594287803902" TEXT="--name=&quot;Name&quot;"/>
 <node CREATED="1594287813049" ID="ID_925667057" MODIFIED="1594287815861" TEXT="-d">
@@ -339,6 +352,9 @@
 <node CREATED="1594288189369" ID="ID_1130403463" MODIFIED="1594288281790" TEXT="docker ps -a -n=1"/>
 <node CREATED="1594288517760" ID="ID_1482435739" MODIFIED="1594348204210" TEXT="docker rm containerid">
 <node CREATED="1594288766720" ID="ID_15542181" MODIFIED="1594288845944" TEXT="docker ps -aq | xargs docker rm -f"/>
+<node CREATED="1594696328401" ID="ID_202624837" MODIFIED="1594696339405" TEXT="docker rm $(docker ps -qa) ">
+<node CREATED="1594696332578" ID="ID_60936702" MODIFIED="1594696370414" TEXT="remove all stop containers"/>
+</node>
 </node>
 <node CREATED="1594288921425" ID="ID_1381524025" MODIFIED="1594348215892">
 <richcontent TYPE="NODE"><html>
@@ -418,8 +434,102 @@
 <node CREATED="1594613341811" ID="ID_623224071" MODIFIED="1594613363855" TEXT="docker volume inspect volume_name"/>
 </node>
 </node>
+<node CREATED="1594710108577" FOLDED="true" ID="ID_1300294893" MODIFIED="1594714107093" TEXT="publish">
+<node CREATED="1594710113769" ID="ID_1126614984" MODIFIED="1594711291478" TEXT="dockerhub">
+<node CREATED="1594710136426" ID="ID_335382395" MODIFIED="1594710142998" TEXT="register account"/>
+<node CREATED="1594710180929" ID="ID_523674836" MODIFIED="1594710363419" TEXT="login">
+<node CREATED="1594710235145" ID="ID_1658905225" MODIFIED="1594710236030" TEXT="docker login --help"/>
+<node CREATED="1594710164881" ID="ID_911887178" MODIFIED="1594710165590" TEXT="https://hub.docker.com/"/>
+<node CREATED="1594710363419" ID="ID_1783543585" MODIFIED="1594710367448">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker login -u gwaysoft
+    </p>
+    <p>
+      Password:
+    </p>
+    <p>
+      WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+    </p>
+    <p>
+      Configure a credential helper to remove this warning. See
+    </p>
+    <p>
+      https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Login Succeeded
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1594350952421" ID="ID_1083530431" MODIFIED="1594350960186" TEXT="practice">
+</node>
+<node CREATED="1594710639449" ID="ID_250884809" MODIFIED="1594711224230" TEXT="docker tag tomcat:1 gwaysoft/tomcat:0.1.0"/>
+<node CREATED="1594711245594" ID="ID_1329617315" MODIFIED="1594711255627" TEXT="docker push gwaysoft/tomcat:0.1.0"/>
+</node>
+<node CREATED="1594711323898" ID="ID_793337206" MODIFIED="1594711328309" TEXT="aliyun">
+<node CREATED="1594711977338" ID="ID_917506128" MODIFIED="1594712034558" TEXT="login, go to Container Registry">
+<node CREATED="1594712724994" ID="ID_1839705777" MODIFIED="1594712725926" TEXT="https://cr.console.aliyun.com/cn-hangzhou/instances/repositories"/>
+</node>
+<node CREATED="1594712036545" ID="ID_1975901854" MODIFIED="1594712045173" TEXT="Namespaces">
+<node CREATED="1594712046377" ID="ID_247154815" MODIFIED="1594712064133" TEXT="add and namespace"/>
+</node>
+<node CREATED="1594712065810" ID="ID_1649138238" MODIFIED="1594712072906" TEXT="Repository">
+<node CREATED="1594712072906" ID="ID_716548759" MODIFIED="1594712087896" TEXT="add a repository"/>
+</node>
+<node CREATED="1594712129609" ID="ID_82521948" MODIFIED="1594712136470" TEXT="operation">
+<node CREATED="1594712137425" ID="ID_1214925664" MODIFIED="1594712140304">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Push image to the registry
+    </p>
+    <p>
+      $ sudo docker login --username=gwaysoft@outlook.com registry.cn-hangzhou.aliyuncs.com
+    </p>
+    <p>
+      $ sudo docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/gwaysoft/tomcat:[tag]
+    </p>
+    <p>
+      $ sudo docker push registry.cn-hangzhou.aliyuncs.com/gwaysoft/tomcat:[tag]
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Pull image from the registry
+    </p>
+    <p>
+      $ sudo docker pull registry.cn-hangzhou.aliyuncs.com/gwaysoft/tomcat:[tag]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594713193866" ID="ID_1359867994" MODIFIED="1594714038706" TEXT="local">
+<node CREATED="1594713199233" ID="ID_749208392" MODIFIED="1594714023701" TEXT="docker save -o mycentos01 mycentos:0.2.1"/>
+<node CREATED="1594714038706" ID="ID_1187079508" MODIFIED="1594714039589" TEXT="docker load -i mycentos01"/>
+</node>
+</node>
+<node CREATED="1594786072681" ID="ID_890104787" MODIFIED="1594786080685" TEXT="network"/>
+<node CREATED="1594786083489" ID="ID_968741996" MODIFIED="1594786087413" TEXT="volume">
+<node CREATED="1594786088193" ID="ID_940999969" MODIFIED="1594786090414" TEXT="docker volume ls"/>
+<node CREATED="1594786099937" ID="ID_962491089" MODIFIED="1594786108510" TEXT="docker volume rm $(docker volume ls -q)"/>
+</node>
+</node>
+<node CREATED="1594350952421" FOLDED="true" ID="ID_1083530431" MODIFIED="1594710595638" TEXT="practice">
 <node CREATED="1594350961725" ID="ID_766105379" MODIFIED="1594350969634" TEXT="nginx">
 <node CREATED="1594351023933" ID="ID_1583813482" MODIFIED="1594351025986" TEXT="search">
 <node CREATED="1594351026853" ID="ID_564720669" MODIFIED="1594351238570" TEXT="docker hub">
@@ -521,7 +631,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594263234376" FOLDED="true" ID="ID_663097565" MODIFIED="1594689907992" TEXT="docker images">
+<node CREATED="1594263234376" FOLDED="true" ID="ID_663097565" MODIFIED="1594715358366" TEXT="docker images">
 <node CREATED="1594367127858" ID="ID_1154808843" MODIFIED="1594367157094" TEXT="&#x6240;&#x6709;&#x7684;&#x5e94;&#x7528;&#xff0c;&#x76f4;&#x63a5;&#x6253;&#x5305;image&#xff0c;&#x76f4;&#x63a5;&#x8dd1;"/>
 <node CREATED="1594367163769" ID="ID_1588074303" MODIFIED="1594367169570" TEXT="get image">
 <node CREATED="1594367169570" ID="ID_1918481309" MODIFIED="1594367182134" TEXT="remote hub"/>
@@ -581,7 +691,7 @@
 </node>
 </node>
 <node CREATED="1594371222650" ID="ID_481629223" MODIFIED="1594371478647" TEXT="essence">
-<node CREATED="1594263241143" FOLDED="true" ID="ID_861950279" MODIFIED="1594695397160" TEXT="container volume">
+<node CREATED="1594263241143" ID="ID_861950279" MODIFIED="1594714146936" TEXT="container volume">
 <node CREATED="1594371562850" ID="ID_90884683" MODIFIED="1594371620103" TEXT="&#x5c06;&#x5e94;&#x7528;&#x548c;&#x73af;&#x5883;&#x6253;&#x5305;&#x6210;&#x4e00;&#x4e2a;image&#xff0c;run image&#x6210;container">
 <node CREATED="1594371639402" ID="ID_1184460187" MODIFIED="1594371651415" TEXT="&#x6570;&#x636e;&#x4e0d;&#x80fd;&#x5728;container&#x91cc;"/>
 <node CREATED="1594371659090" ID="ID_241366097" MODIFIED="1594371668206" TEXT="&#x6570;&#x636e;&#x53ef;&#x4ee5;&#x6301;&#x4e45;&#x5316;"/>
@@ -696,7 +806,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594263254486" ID="ID_548303388" MODIFIED="1594263259059" TEXT="dockerfile">
+<node CREATED="1594263254486" ID="ID_548303388" MODIFIED="1594709921703" TEXT="dockerfile">
 <node CREATED="1594690523772" ID="ID_303677200" MODIFIED="1594690530446" TEXT="goal">
 <node CREATED="1594690423699" ID="ID_1485577702" MODIFIED="1594690457217" TEXT="&#x4ea4;&#x4ed8;docker&#x5df2;&#x7ecf;&#x662f;&#x4f01;&#x4e1a;&#x4ea4;&#x4ed8;&#x7684;&#x6807;&#x51c6;&#xff0c;&#x7c7b;&#x4f3c;&#x4e8e;jar"/>
 <node CREATED="1594690531564" ID="ID_663305491" MODIFIED="1594690560880" TEXT="dockerfile -&gt; docker images -&gt; docker container"/>
@@ -710,7 +820,7 @@
 <node CREATED="1594626272025" ID="ID_180527952" MODIFIED="1594626273917" TEXT="aliyun"/>
 </node>
 </node>
-<node CREATED="1594689486931" ID="ID_1702339452" MODIFIED="1594689491103" TEXT="command">
+<node CREATED="1594689486931" FOLDED="true" ID="ID_1702339452" MODIFIED="1594710631502" TEXT="command">
 <node CREATED="1594690165029" ID="ID_1476998756" MODIFIED="1594690167471" TEXT="https://www.cnblogs.com/yanh0606/p/11360936.html"/>
 <node CREATED="1594690223515" FOLDED="true" ID="ID_1948011960" MODIFIED="1594690412762" TEXT="policy">
 <node CREATED="1594690229180" ID="ID_124804618" MODIFIED="1594690343931">
@@ -795,17 +905,31 @@
 <node CREATED="1594690891796" ID="ID_1489312000" MODIFIED="1594690894033" TEXT="CMD">
 <node CREATED="1594690894764" ID="ID_601799703" MODIFIED="1594690915345" TEXT="&#x6307;&#x5b9a;&#x5bb9;&#x5668;&#x542f;&#x52a8;&#x65f6;&#x8fd0;&#x884c;&#x547d;&#x4ee4;"/>
 <node CREATED="1594690928460" ID="ID_1615632846" MODIFIED="1594690940977" TEXT="&#x53ea;&#x6709;&#x6700;&#x540e;&#x4e00;&#x4e2a;&#x751f;&#x6548;"/>
-<node CREATED="1594690976718" ID="ID_763644303" MODIFIED="1594690984592" TEXT="&#x66ff;&#x6362;"/>
+<node CREATED="1594690976718" ID="ID_763644303" MODIFIED="1594690984592" TEXT="&#x66ff;&#x6362;">
+<node CREATED="1594696481618" ID="ID_1200474752" MODIFIED="1594696491406" TEXT="dockerfile">
+<node CREATED="1594696429681" ID="ID_1449119461" MODIFIED="1594696448246" TEXT="CMD [&quot;ls&quot;, &quot;-a&quot;]"/>
+</node>
+<node CREATED="1594696492962" ID="ID_1960162836" MODIFIED="1594696903334" TEXT="docker run imageid -l /">
+<node CREATED="1594696507034" ID="ID_914699111" MODIFIED="1594697109406" TEXT="docker: Error response from daemon: OCI runtime create failed: ..."/>
+</node>
+</node>
 </node>
 <node CREATED="1594690917188" ID="ID_1983410084" MODIFIED="1594690925624" TEXT="ENTRYPOINT">
 <node CREATED="1594690942364" ID="ID_285836450" MODIFIED="1594690951072" TEXT="&#x53ef;&#x4ee5;&#x8ffd;&#x52a0;&#x547d;&#x4ee4;"/>
-<node CREATED="1594690991859" ID="ID_801370181" MODIFIED="1594690994168" TEXT="&#x8ffd;&#x52a0;"/>
+<node CREATED="1594690991859" ID="ID_801370181" MODIFIED="1594690994168" TEXT="&#x8ffd;&#x52a0;">
+<node CREATED="1594696481618" ID="ID_1811375552" MODIFIED="1594696491406" TEXT="dockerfile">
+<node CREATED="1594696429681" ID="ID_315544475" MODIFIED="1594696527126" TEXT="ENTRYPOINT [&quot;ls&quot;, &quot;-a&quot;]"/>
+</node>
+<node CREATED="1594696492962" ID="ID_959676389" MODIFIED="1594696909678" TEXT="docker run imageid - l /">
+<node CREATED="1594696507034" ID="ID_921613970" MODIFIED="1594697119215" TEXT="OK"/>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1594621738540" ID="ID_594151918" MODIFIED="1594690987179" TEXT="practice">
-<node CREATED="1594692413553" ID="ID_241701441" MODIFIED="1594692445976" TEXT="centos">
+</node>
+</node>
+<node CREATED="1594621738540" FOLDED="true" ID="ID_594151918" MODIFIED="1594710625366" TEXT="practice">
+<node CREATED="1594692413553" FOLDED="true" ID="ID_241701441" MODIFIED="1594709874984" TEXT="centos">
 <node CREATED="1594695256850" ID="ID_905728028" MODIFIED="1594695264731" TEXT="build 0.1.0">
 <node CREATED="1594692420289" FOLDED="true" ID="ID_554560246" MODIFIED="1594692691431" TEXT="write dockerfile">
 <node CREATED="1594692429529" ID="ID_1517184169" MODIFIED="1594692442961">
@@ -1173,7 +1297,7 @@
 </richcontent>
 </node>
 </node>
-</node>
+<node CREATED="1594697228745" FOLDED="true" ID="ID_1494880654" MODIFIED="1594697325422" TEXT="discarded">
 <node CREATED="1594691273795" FOLDED="true" ID="ID_1139203774" MODIFIED="1594692921031" TEXT="centos official">
 <node CREATED="1594691304556" ID="ID_969740676" MODIFIED="1594691306782" TEXT="https://github.com/CentOS/sig-cloud-instance-images/blob/5125788a241618b4d37254050d0bddcbd5b7df33/docker/Dockerfile"/>
 <node CREATED="1594691286172" ID="ID_1993123233" MODIFIED="1594691335475">
@@ -1213,8 +1337,7 @@
       CMD [&quot;/bin/bash&quot;]
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1594689415284" FOLDED="true" ID="ID_1628809615" MODIFIED="1594692923039" TEXT="centos simple">
@@ -1366,6 +1489,95 @@
 </node>
 </node>
 </node>
+</node>
+<node CREATED="1594697950386" ID="ID_623887722" MODIFIED="1594697955270" TEXT="tomcat">
+<node CREATED="1594697956674" ID="ID_1332078580" MODIFIED="1594697964238" TEXT="dockerfile">
+<node CREATED="1594698475857" ID="ID_1383133670" MODIFIED="1594698478242" TEXT="echo &quot;readme&quot; &gt;&gt; readme.txt"/>
+<node CREATED="1594698258050" ID="ID_1872795917" MODIFIED="1594698263606" TEXT="vim Dockerfile">
+<node CREATED="1594698264434" ID="ID_679565554" MODIFIED="1594698286502" TEXT="Dockerfile">
+<node CREATED="1594698287554" ID="ID_1888227369" MODIFIED="1594698289870" TEXT="default name"/>
+<node CREATED="1594698303874" ID="ID_391663619" MODIFIED="1594698321070" TEXT="build &#x81ea;&#x52a8;&#x5bfb;&#x627e;Dockerfile"/>
+</node>
+<node CREATED="1594701544177" ID="ID_1307506296" MODIFIED="1594708221672">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      FROM centos
+    </p>
+    <p>
+      MAINTAINER david&lt;david.wei@ebaotech.com&gt;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ENV MYPATH /usr/local
+    </p>
+    <p>
+      WORKDIR $MYPATH
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      COPY readme.txt $MYPAH/readme.txt
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      ADD jdk-11.0.7_linux-x64_bin.tar.gz $MYPATH
+    </p>
+    <p>
+      ADD apache-tomcat-9.0.36.tar.gz $MYPATH
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # jdk &#35299;&#21387;&#30446;&#24405;&#20026;jdk-11.0.7
+    </p>
+    <p>
+      ENV JAVA_HOME /usr/local/jdk-11.0.7
+    </p>
+    <p>
+      ENV CATALINA_HOME /usr/local/apache-tomcat-9.0.36
+    </p>
+    <p>
+      ENV CATALINA_BASE /usr/local/apache-tomcat-9.0.36
+    </p>
+    <p>
+      ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/lib:$CATALINA_HOME/bin
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      EXPOSE 8080
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      CMD $CATALINA_HOME/bin/startup.sh &amp;&amp; tail -f $CATALINA_HOME/logs/catalina.out
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594708231545" ID="ID_1464756706" MODIFIED="1594708233614" TEXT="build">
+<node CREATED="1594708234689" ID="ID_1682239551" MODIFIED="1594708989308" TEXT="docker build -t tomcat:1 ."/>
+</node>
+<node CREATED="1594708991578" ID="ID_1930170086" MODIFIED="1594708992774" TEXT="run">
+<node CREATED="1594708911122" ID="ID_17890375" MODIFIED="1594708912046" TEXT="docker run -d -p 9090:8080 --name mytomcat -v /home/temp/test:/usr/local/apache-tomcat-9.0.36/webapps/test -v /home/temp/logs:/usr/local/apache-tomcat-9.0.36/logs tomcat:1"/>
+</node>
+</node>
+</node>
 <node CREATED="1594622692363" FOLDED="true" ID="ID_1067730800" MODIFIED="1594690069887" TEXT="&#x5bb9;&#x5668;&#x6570;&#x636e;&#x5377;">
 <node CREATED="1594622921659" ID="ID_426136184" MODIFIED="1594622930518">
 <richcontent TYPE="NODE"><html>
@@ -1482,7 +1694,483 @@
 <node CREATED="1594624433009" ID="ID_284630417" MODIFIED="1594624448310" TEXT="&#x591a;&#x4e2a;mysql&#xff0c;redis&#xff0c;&#x5b9e;&#x73b0;&#x6570;&#x636e;&#x5171;&#x4eab;"/>
 </node>
 </node>
-<node CREATED="1594263260455" ID="ID_698549090" MODIFIED="1594263265860" TEXT="docker network"/>
+<node CREATED="1594263260455" ID="ID_698549090" MODIFIED="1594263265860" TEXT="docker network">
+<node CREATED="1594715653105" ID="ID_1812842788" MODIFIED="1594715667806" TEXT="host network">
+<node CREATED="1594715668712" ID="ID_1182504322" MODIFIED="1594718565217" TEXT="ip addr">
+<node CREATED="1594715674552" ID="ID_109223151" MODIFIED="1594715677005" TEXT="lo">
+<node CREATED="1594715677832" ID="ID_443211855" MODIFIED="1594715685389" TEXT="localhost"/>
+</node>
+<node CREATED="1594715688273" ID="ID_1541296743" MODIFIED="1594715702253" TEXT="ens33"/>
+<node CREATED="1594715704425" ID="ID_598613388" MODIFIED="1594715708925" TEXT="docker0">
+<node CREATED="1594718550307" ID="ID_637228143" MODIFIED="1594718551047" TEXT="inet 172.17.0.1/16"/>
+</node>
+</node>
+</node>
+<node CREATED="1594716459303" ID="ID_691004460" MODIFIED="1594780815709" TEXT="policy">
+<node CREATED="1594716514565" ID="ID_1734135239" MODIFIED="1594716564975" TEXT="&#x6bcf;&#x5b89;&#x88c5;&#x4e00;&#x4e2a;docker&#xff0c;&#x5c31;&#x4f1a;&#x6709;&#x4e00;&#x4e2a;&#x7f51;&#x5361;docker0"/>
+<node CREATED="1594716462352" ID="ID_327112563" MODIFIED="1594716510921" TEXT="&#x6bcf;run&#x4e00;&#x4e2a;contrainer&#xff0c;&#x5c31;&#x4f1a;&#x7ed9;&#x5bb9;&#x5668;&#x5206;&#x914d;&#x4e00;&#x4e2a;ip"/>
+<node CREATED="1594716569306" ID="ID_1658070254" MODIFIED="1594717091345" TEXT="&#x4f7f;&#x7528;&#x6865;&#x63a5;&#x6a21;&#x5f0f;&#xff0c;veth-pair&#x6280;&#x672f;">
+<node CREATED="1594716973571" ID="ID_1478451467" MODIFIED="1594717009760" TEXT="&#x7ed9;&#x542f;&#x52a8;&#x4e00;&#x4e2a;container&#xff0c;host&#x548c;container&#x6210;&#x5bf9;&#x51fa;&#x73b0;"/>
+<node CREATED="1594717092219" ID="ID_1534023708" MODIFIED="1594719095297" TEXT="&#x8fde;&#x63a5;&#x865a;&#x62df;&#x7f51;&#x7edc;&#x8bbe;&#x7f6e;"/>
+</node>
+<node CREATED="1594780824041" ID="ID_1964630345" MODIFIED="1594780834546" TEXT="overview">
+<node CREATED="1594719019107" ID="ID_1646853836" MODIFIED="1594719031324">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="docker_k8s_pic/docker.network.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594780973881" ID="ID_966862109" MODIFIED="1594781335881" TEXT="command">
+<node CREATED="1594780981523" ID="ID_1472335411" MODIFIED="1594780994230" TEXT="docker network ls">
+<node CREATED="1594781014897" ID="ID_1441174407" MODIFIED="1594781019304">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker network ls
+    </p>
+    <p>
+      NETWORK ID&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DRIVER&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SCOPE
+    </p>
+    <p>
+      0dfd2e193098&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bridge&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bridge&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;local
+    </p>
+    <p>
+      cd650ade94b4&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;host&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;host&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;local
+    </p>
+    <p>
+      855b41c960df&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;none&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;null&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;local
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1594780995657" FOLDED="true" ID="ID_1515360767" MODIFIED="1594785396149" TEXT="docker network inspect 0d">
+<node CREATED="1594781055825" ID="ID_1995512472" MODIFIED="1594781060042">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker network inspect 0d
+    </p>
+    <p>
+      [
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;bridge&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Id&quot;: &quot;0dfd2e193098f340d20563033da86769b69ad27101f516b0cf4f3279780c7652&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Created&quot;: &quot;2020-07-09T02:24:34.499684847-04:00&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Scope&quot;: &quot;local&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Driver&quot;: &quot;bridge&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;EnableIPv6&quot;: false,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPAM&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Driver&quot;: &quot;default&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Options&quot;: null,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Config&quot;: [
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Subnet&quot;: &quot;172.17.0.0/16&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Gateway&quot;: &quot;172.17.0.1&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Internal&quot;: false,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Attachable&quot;: false,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Ingress&quot;: false,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;ConfigFrom&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Network&quot;: &quot;&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;ConfigOnly&quot;: false,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Containers&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &quot;6b135ce6de3fe87b848717dbfbf7579a64f074f7a85654e7940b1b4596cb7af9&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;mytomcat02&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;EndpointID&quot;: &quot;7eb360ca78063839d3570276f84d7ac351934ca5ff3ff866a27f207743e2b1fc&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv4Address&quot;: &quot;172.17.0.4/16&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv6Address&quot;: &quot;&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &quot;767298f050a1fb1ffbb184f6e411970561305c6569af59b457f8393eda773aef&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;mytomcat&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;EndpointID&quot;: &quot;5045109dd4a104ba9cd89db6a9ee13d0a4c6d6c1d94f9d23a23adb82c956a679&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv4Address&quot;: &quot;172.17.0.3/16&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv6Address&quot;: &quot;&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &quot;ad9988c3ea218ed93a23b773bfd0560e41c24a64e36c1afd53349738c29dcc34&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;mytomcat01&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;EndpointID&quot;: &quot;dfe654f0a359502c28d2796cd37fe6f8c5bffd7a7a0e3e09f8c4a4c4aa592169&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MacAddress&quot;: &quot;02:42:ac:11:00:02&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv4Address&quot;: &quot;172.17.0.2/16&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv6Address&quot;: &quot;&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Options&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.bridge.default_bridge&quot;: &quot;true&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.bridge.enable_icc&quot;: &quot;true&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.bridge.enable_ip_masquerade&quot;: &quot;true&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.bridge.host_binding_ipv4&quot;: &quot;0.0.0.0&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.bridge.name&quot;: &quot;docker0&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;com.docker.network.driver.mtu&quot;: &quot;1500&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Labels&quot;: {}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      ]
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1594781347129" ID="ID_1211067303" MODIFIED="1594781348814" TEXT="docker network inspect $(docker network ls -q)"/>
+<node CREATED="1594783793081" ID="ID_1057590544" MODIFIED="1594784809790" TEXT="docker network create&#xff08;&#x81ea;&#x5b9a;&#x4e49;&#x7f51;&#x7edc;&#xff09;">
+<node CREATED="1594783804473" ID="ID_1724802553" MODIFIED="1594783811038" TEXT="&#x7f51;&#x7edc;&#x6a21;&#x5f0f;">
+<node CREATED="1594783811913" ID="ID_1315357996" MODIFIED="1594783816126" TEXT="bridge">
+<node CREATED="1594783828065" ID="ID_162567594" MODIFIED="1594783958046" TEXT="&#x5728;docker&#x642d;&#x6865; &#xff08;&#x9ed8;&#x8ba4;&#xff09;">
+<node CREATED="1594784922969" ID="ID_466947558" MODIFIED="1594784940069" TEXT="--driver bridge"/>
+</node>
+</node>
+<node CREATED="1594783847874" ID="ID_1450153832" MODIFIED="1594783854667" TEXT="none">
+<node CREATED="1594783854668" ID="ID_338354499" MODIFIED="1594783868254" TEXT="&#x4e0d;&#x914d;&#x7f6e;&#x7f51;&#x7edc;"/>
+</node>
+<node CREATED="1594783871337" ID="ID_1696478439" MODIFIED="1594783874042" TEXT="host">
+<node CREATED="1594783874043" ID="ID_1862933379" MODIFIED="1594783909870" TEXT="&#x548c;host&#x5bbf;&#x4e3b;&#x673a;&#x5171;&#x4eab;&#x7f51;&#x7edc;"/>
+</node>
+<node CREATED="1594783912361" ID="ID_414146946" MODIFIED="1594783919118" TEXT="container">
+<node CREATED="1594783920665" ID="ID_636854323" MODIFIED="1594784023766" TEXT="&#x5bb9;&#x5668;&#x5185;&#x7f51;&#x7edc;&#x8fde;&#x63a5; &#xff08;&#x7528;&#x7684;&#x5c11;&#xff09;"/>
+</node>
+</node>
+<node CREATED="1594786654113" ID="ID_1902223888" MODIFIED="1594786670958" TEXT="docker network create">
+<node CREATED="1594784811857" ID="ID_695072395" MODIFIED="1594785405888">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 -o &quot;com.docker.network.bridge.name&quot;=&quot;mynet&quot; mynet
+    </p>
+    <p>
+      &#160;mynet
+    </p>
+    <p>
+      docker network ls
+    </p>
+    <p>
+      ifconfig
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1594784999529" ID="ID_461648794" MODIFIED="1594785000638" TEXT="docker network inspect mynet"/>
+<node CREATED="1594785412105" ID="ID_1258983584" MODIFIED="1594785426534" TEXT="docker network rm mynet"/>
+</node>
+<node CREATED="1594786632697" ID="ID_526425221" MODIFIED="1594786737517" TEXT="docker run">
+<node CREATED="1594786697185" ID="ID_1990016213" MODIFIED="1594786698710" TEXT="docker run -d -P --net mynet --name tomcat-mynet tomcat:1"/>
+<node CREATED="1594786718689" ID="ID_1356198684" MODIFIED="1594786719518" TEXT="firewall-cmd --zone=public --add-port=32773/tcp --permanent"/>
+<node CREATED="1594786731690" ID="ID_237014123" MODIFIED="1594786733366" TEXT="systemctl restart firewalld"/>
+</node>
+<node CREATED="1594787013033" ID="ID_320192694" MODIFIED="1594787014325" TEXT="ping">
+<node CREATED="1594787015161" ID="ID_1373365704" MODIFIED="1594787053216" TEXT="docker exec -it tomcat-mynet ping tomcat-mynet01">
+<node CREATED="1594787018418" ID="ID_162268878" MODIFIED="1594787020141" TEXT="ok"/>
+</node>
+<node CREATED="1594787054017" ID="ID_1794000556" MODIFIED="1594787063958" TEXT="docker exec -it tomcat-mynet01 ping tomcat-mynet">
+<node CREATED="1594787065827" ID="ID_841515356" MODIFIED="1594787066847" TEXT="ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1594788995007" ID="ID_1719226453" MODIFIED="1594789002380" TEXT="docker network connect">
+<node CREATED="1594789123479" ID="ID_450975159" MODIFIED="1594789148857" TEXT="docker run -p -P --name mytomcat01 tomcat:1"/>
+<node CREATED="1594789007319" ID="ID_779838289" MODIFIED="1594789037451" TEXT="docker network connect mynet mytomcat01">
+<node CREATED="1594789099959" ID="ID_445464636" MODIFIED="1594789100956" TEXT="docker network inspect mynet">
+<node CREATED="1594789113151" ID="ID_754845140" MODIFIED="1594792220014">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;417f377736a02f37190a22db8a8cc86071050a8bf425cae1a64375a3f69cf2cb&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: &quot;mytomcat01&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;EndpointID&quot;: &quot;737591f4d9df2f9361d8154e865fefb79e9935376d9a75f923293e043d96b0e3&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MacAddress&quot;: &quot;02:42:c0:a8:00:04&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv4Address&quot;: &quot;192.168.0.4/16&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;IPv6Address&quot;: &quot;&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1594789600551" ID="ID_337470676" MODIFIED="1594789601676" TEXT="docker exec -it mytomcat01 ip addr">
+<node CREATED="1594789185303" ID="ID_502010153" MODIFIED="1594789653568" TEXT="&#x4e00;&#x4e2a;&#x5bb9;&#x5668;&#x4e24;&#x4e2a;ip"/>
+<node CREATED="1594789634888" ID="ID_1753722938" MODIFIED="1594789639390">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker exec -it mytomcat01 ip addr
+    </p>
+    <p>
+      1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;inet 127.0.0.1/8 scope host lo
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;valid_lft forever preferred_lft forever
+    </p>
+    <p>
+      236: eth0@if237: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;link/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;valid_lft forever preferred_lft forever
+    </p>
+    <p>
+      242: eth2@if243: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;link/ether 02:42:c0:a8:00:04 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;inet 192.168.0.4/16 brd 192.168.255.255 scope global eth2
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;valid_lft forever preferred_lft forever
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1594789003271" ID="ID_1476145140" MODIFIED="1594789038384" TEXT="docker exec -it mytomcat01 ping tomcat-mynet">
+<node CREATED="1594789040183" ID="ID_564253223" MODIFIED="1594789042004" TEXT="ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1594781076065" ID="ID_38156526" MODIFIED="1594781082662" TEXT="practice">
+<node CREATED="1594781083505" ID="ID_1454031481" MODIFIED="1594787093214" TEXT="[discarded] --link tomcat02 ping tomcat01">
+<node CREATED="1594781111233" ID="ID_938977819" MODIFIED="1594781134013" TEXT="docker run -d -P --name tomcat01 tomcat:1"/>
+<node CREATED="1594781138169" ID="ID_913102563" MODIFIED="1594781189262" TEXT="docker run -d -P --name tomcat02 --link tomcat01 tomcat:1"/>
+<node CREATED="1594781190905" ID="ID_204697097" MODIFIED="1594781222766" TEXT="docker exec -it tomcat 02 ping tomcat01">
+<node CREATED="1594781224001" ID="ID_764789285" MODIFIED="1594781225022" TEXT="ok"/>
+</node>
+<node CREATED="1594781190905" ID="ID_358232177" MODIFIED="1594781238605" TEXT="docker exec -it tomcat 01 ping tomcat02">
+<node CREATED="1594781224001" ID="ID_1811385674" MODIFIED="1594781242637" TEXT="fail"/>
+</node>
+<node CREATED="1594782787073" ID="ID_707043816" MODIFIED="1594782797206" TEXT="check configuration">
+<node CREATED="1594782315169" ID="ID_112130061" MODIFIED="1594782653014" TEXT="docker inspect tomcat02">
+<node CREATED="1594782653937" ID="ID_443485961" MODIFIED="1594782657433">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;Links&quot;: [
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;/mytomcat:/mytomcat02/mytomcat&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1594782743353" ID="ID_4681829" MODIFIED="1594782761160" TEXT="docker exec -it mytomcat02 cat /etc/hosts">
+<node CREATED="1594782750170" ID="ID_220605710" MODIFIED="1594782756016">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker exec -it mytomcat02 cat /etc/hosts
+    </p>
+    <p>
+      127.0.0.1 localhost
+    </p>
+    <p>
+      ::1 localhost ip6-localhost ip6-loopback
+    </p>
+    <p>
+      fe00::0 ip6-localnet
+    </p>
+    <p>
+      ff00::0 ip6-mcastprefix
+    </p>
+    <p>
+      ff02::1 ip6-allnodes
+    </p>
+    <p>
+      ff02::2 ip6-allrouters
+    </p>
+    <p>
+      172.17.0.3 mytomcat 767298f050a1
+    </p>
+    <p>
+      172.17.0.4 6b135ce6de3f
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1594790044887" ID="ID_856041330" MODIFIED="1594790053492" TEXT="redis cluster"/>
+</node>
+</node>
 </node>
 <node CREATED="1594263268398" ID="ID_1188328389" MODIFIED="1594263276051" TEXT="idea integrate docker"/>
 </node>
