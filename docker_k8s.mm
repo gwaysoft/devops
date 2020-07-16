@@ -2,7 +2,8 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1593756866707" ID="ID_152132444" MODIFIED="1594689852345" TEXT="docker &amp; k8s">
 <node CREATED="1593757145152" ID="ID_75884518" MODIFIED="1594712899147" POSITION="right" TEXT="docker">
-<node CREATED="1594712899147" FOLDED="true" ID="ID_1867584067" MODIFIED="1594714141165" TEXT="overview">
+<node CREATED="1594712899147" ID="ID_1867584067" MODIFIED="1594882026358" TEXT="overview">
+<node CREATED="1594882028649" ID="ID_1027940699" MODIFIED="1594882032058" TEXT="https://www.runoob.com/docker/docker-tutorial.html"/>
 <node CREATED="1594712902451" ID="ID_7735921" MODIFIED="1594712922779">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -770,17 +771,14 @@
 </node>
 <node CREATED="1594609720930" ID="ID_142016772" MODIFIED="1594609723991" TEXT="mysql">
 <node CREATED="1594609816458" ID="ID_149694810" MODIFIED="1594609837089" TEXT="docker pull mysql:5.7.30"/>
-<node CREATED="1594610652232" ID="ID_1425815355" MODIFIED="1594610657522">
+<node CREATED="1594610652232" ID="ID_1425815355" MODIFIED="1594878507148">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      docker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d \
-    </p>
-    <p>
-      &gt; -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql01 mysql:5.7.30
+      docker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql01 mysql:5.7.30
     </p>
   </body>
 </html>
