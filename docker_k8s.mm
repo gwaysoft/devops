@@ -856,7 +856,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594263234376" FOLDED="true" ID="ID_663097565" MODIFIED="1594715358366" TEXT="docker images">
+<node CREATED="1594263234376" ID="ID_663097565" MODIFIED="1598322893391" TEXT="docker images">
 <node CREATED="1594367127858" ID="ID_1154808843" MODIFIED="1594367157094" TEXT="&#x6240;&#x6709;&#x7684;&#x5e94;&#x7528;&#xff0c;&#x76f4;&#x63a5;&#x6253;&#x5305;image&#xff0c;&#x76f4;&#x63a5;&#x8dd1;"/>
 <node CREATED="1594367163769" ID="ID_1588074303" MODIFIED="1594367169570" TEXT="get image">
 <node CREATED="1594367169570" ID="ID_1918481309" MODIFIED="1594367182134" TEXT="remote hub"/>
@@ -915,7 +915,7 @@
 </node>
 </node>
 <node CREATED="1594371222650" ID="ID_481629223" MODIFIED="1596003527900" TEXT="essence">
-<node CREATED="1594263241143" FOLDED="true" ID="ID_861950279" MODIFIED="1596003561340" TEXT="container volume">
+<node CREATED="1594263241143" ID="ID_861950279" MODIFIED="1598322898901" TEXT="container volume">
 <node CREATED="1594371562850" ID="ID_90884683" MODIFIED="1594371620103" TEXT="&#x5c06;&#x5e94;&#x7528;&#x548c;&#x73af;&#x5883;&#x6253;&#x5305;&#x6210;&#x4e00;&#x4e2a;image&#xff0c;run image&#x6210;container">
 <node CREATED="1594371639402" ID="ID_1184460187" MODIFIED="1594371651415" TEXT="&#x6570;&#x636e;&#x4e0d;&#x80fd;&#x5728;container&#x91cc;"/>
 <node CREATED="1594371659090" ID="ID_241366097" MODIFIED="1594371668206" TEXT="&#x6570;&#x636e;&#x53ef;&#x4ee5;&#x6301;&#x4e45;&#x5316;"/>
@@ -993,7 +993,7 @@
 </node>
 <node CREATED="1594609720930" ID="ID_142016772" MODIFIED="1594609723991" TEXT="mysql">
 <node CREATED="1594609816458" ID="ID_149694810" MODIFIED="1594609837089" TEXT="docker pull mysql:5.7.30"/>
-<node CREATED="1594610652232" ID="ID_1425815355" MODIFIED="1595395613218">
+<node CREATED="1594610652232" ID="ID_1425815355" MODIFIED="1598323402621">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1027,7 +1027,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594263254486" FOLDED="true" ID="ID_548303388" MODIFIED="1596003559260" TEXT="dockerfile">
+<node CREATED="1594263254486" FOLDED="true" ID="ID_548303388" MODIFIED="1599637638124" TEXT="dockerfile">
 <node CREATED="1596003544606" ID="ID_1265275353" MODIFIED="1596003548800" TEXT="https://docs.docker.com/engine/reference/builder/"/>
 <node CREATED="1594690523772" ID="ID_303677200" MODIFIED="1594690530446" TEXT="goal">
 <node CREATED="1594690423699" ID="ID_1485577702" MODIFIED="1594690457217" TEXT="&#x4ea4;&#x4ed8;docker&#x5df2;&#x7ecf;&#x662f;&#x4f01;&#x4e1a;&#x4ea4;&#x4ed8;&#x7684;&#x6807;&#x51c6;&#xff0c;&#x7c7b;&#x4f3c;&#x4e8e;jar"/>
@@ -1042,7 +1042,7 @@
 <node CREATED="1594626272025" ID="ID_180527952" MODIFIED="1594626273917" TEXT="aliyun"/>
 </node>
 </node>
-<node CREATED="1594689486931" FOLDED="true" ID="ID_1702339452" MODIFIED="1596003551333" TEXT="command">
+<node CREATED="1594689486931" ID="ID_1702339452" MODIFIED="1599634853138" TEXT="command">
 <node CREATED="1594690165029" ID="ID_1476998756" MODIFIED="1594690167471" TEXT="https://www.cnblogs.com/yanh0606/p/11360936.html"/>
 <node CREATED="1594690223515" FOLDED="true" ID="ID_1948011960" MODIFIED="1594690412762" TEXT="policy">
 <node CREATED="1594690229180" ID="ID_124804618" MODIFIED="1594690343931">
@@ -1148,7 +1148,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594621738540" FOLDED="true" ID="ID_594151918" MODIFIED="1596003553124" TEXT="practice">
+<node CREATED="1594621738540" ID="ID_594151918" MODIFIED="1599634865071" TEXT="practice">
 <node CREATED="1594692413553" FOLDED="true" ID="ID_241701441" MODIFIED="1594709874984" TEXT="centos">
 <node CREATED="1594695256850" ID="ID_905728028" MODIFIED="1594695264731" TEXT="build 0.1.0">
 <node CREATED="1594692420289" FOLDED="true" ID="ID_554560246" MODIFIED="1594692691431" TEXT="write dockerfile">
@@ -1795,7 +1795,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594622692363" FOLDED="true" ID="ID_1067730800" MODIFIED="1596003556348" TEXT="&#x5bb9;&#x5668;&#x6570;&#x636e;&#x5377;">
+<node CREATED="1594622692363" FOLDED="true" ID="ID_1067730800" MODIFIED="1599637376730" TEXT="&#x5bb9;&#x5668;&#x6570;&#x636e;&#x5377;">
 <node CREATED="1594622921659" ID="ID_426136184" MODIFIED="1594622930518">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1920,7 +1920,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1594716459303" FOLDED="true" ID="ID_691004460" MODIFIED="1596003530564" TEXT="policy">
+<node CREATED="1594716459303" ID="ID_691004460" MODIFIED="1599631985881" TEXT="policy">
 <node CREATED="1594716514565" ID="ID_1734135239" MODIFIED="1594716564975" TEXT="&#x6bcf;&#x5b89;&#x88c5;&#x4e00;&#x4e2a;docker&#xff0c;&#x5c31;&#x4f1a;&#x6709;&#x4e00;&#x4e2a;&#x7f51;&#x5361;docker0"/>
 <node CREATED="1594716462352" ID="ID_327112563" MODIFIED="1594716510921" TEXT="&#x6bcf;run&#x4e00;&#x4e2a;contrainer&#xff0c;&#x5c31;&#x4f1a;&#x7ed9;&#x5bb9;&#x5668;&#x5206;&#x914d;&#x4e00;&#x4e2a;ip"/>
 <node CREATED="1594716569306" ID="ID_1658070254" MODIFIED="1594717091345" TEXT="&#x4f7f;&#x7528;&#x6865;&#x63a5;&#x6a21;&#x5f0f;&#xff0c;veth-pair&#x6280;&#x672f;">
@@ -2177,26 +2177,27 @@
 </node>
 </node>
 <node CREATED="1594786654113" ID="ID_1902223888" MODIFIED="1594786670958" TEXT="docker network create">
-<node CREATED="1594784811857" ID="ID_695072395" MODIFIED="1594785405888">
+<node CREATED="1594784811857" ID="ID_695072395" MODIFIED="1599632260820">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 -o &quot;com.docker.network.bridge.name&quot;=&quot;mynet&quot; mynet
+      $ docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 -o &quot;com.docker.network.bridge.name&quot;=&quot;mynet&quot; mynet
     </p>
     <p>
       &#160;mynet
     </p>
     <p>
-      docker network ls
+      $ docker network ls
     </p>
     <p>
-      ifconfig
+      $ ifconfig
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node CREATED="1594784999529" ID="ID_461648794" MODIFIED="1594785000638" TEXT="docker network inspect mynet"/>
 <node CREATED="1594785412105" ID="ID_1258983584" MODIFIED="1594785426534" TEXT="docker network rm mynet"/>
@@ -2386,7 +2387,7 @@
 <node CREATED="1595555701405" ID="ID_1538501880" MODIFIED="1595555712972" TEXT="practice">
 <node CREATED="1595555712972" ID="ID_642252225" MODIFIED="1596083276298" TEXT="references">
 <node CREATED="1595555718471" ID="ID_541933067" MODIFIED="1595555719220" TEXT="https://www.runoob.com/docker/docker-tutorial.html "/>
-<node CREATED="1595558953124" FOLDED="true" ID="ID_143551265" MODIFIED="1596077174024" TEXT="nginx">
+<node CREATED="1595558953124" ID="ID_143551265" MODIFIED="1599630843774" TEXT="nginx">
 <node CREATED="1595558961065" ID="ID_189204760" MODIFIED="1595558974145" TEXT="-v html">
 <node CREATED="1595558975051" ID="ID_699502735" MODIFIED="1595559012835">
 <richcontent TYPE="NODE"><html>
@@ -2407,7 +2408,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1595564867532" ID="ID_438686304" MODIFIED="1595572262501" TEXT="docker run -d --name nginx_sync nginx&#xa;mkdir -p /home/home/nginx/conf.d /home/nginx/html /home/nginx/log&#xa;docker cp contain_id:/etc/nginx/conf.d /home/nginx/conf.d&#xa;docker cp contain_id:/etc/nginx/nginx.conf /home/nginx/nginx.conf&#xa;docker cp contain_id:/usr/share/nginx/html /home/nginx/html&#xa;docker run -d -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/log:/var/log/nginx -p 8000:80 --name nginx-v ngixn">
+<node CREATED="1595564867532" ID="ID_438686304" MODIFIED="1599641151858" TEXT="docker run -d --name nginx_sync nginx&#xa;mkdir -p /home/home/nginx/conf.d /home/nginx/html /home/nginx/log&#xa;docker cp contain_id:/etc/nginx/conf.d /home/nginx/conf.d&#xa;docker cp contain_id:/etc/nginx/nginx.conf /home/nginx/nginx.conf&#xa;docker cp contain_id:/usr/share/nginx/html /home/nginx/html&#xa;docker run -d -v /home/nginx/conf.d:/etc/nginx/conf.d -v /home/nginx/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/html:/usr/share/nginx/html  -v /home/nginx/log:/var/log/nginx -p 8000:80 --name nginx-v ngixn">
 <node CREATED="1595572266081" ID="ID_1678954131" MODIFIED="1595572273788" TEXT="add relevant files first"/>
 </node>
 </node>
@@ -2417,10 +2418,10 @@
 </node>
 </node>
 </node>
-<node CREATED="1594263372319" FOLDED="true" ID="ID_1069228466" MODIFIED="1596176617321" TEXT="docker compose">
+<node CREATED="1594263372319" ID="ID_1069228466" MODIFIED="1599631056941" TEXT="docker compose">
 <node CREATED="1596003473822" ID="ID_1601530613" MODIFIED="1596003475325" TEXT="https://docs.docker.com/compose/compose-file"/>
 <node CREATED="1595911168560" ID="ID_160506155" MODIFIED="1595917416400" TEXT="https://www.bilibili.com/video/BV1kv411q7Qc"/>
-<node CREATED="1595839014780" FOLDED="true" ID="ID_344169287" MODIFIED="1596162126187" TEXT="introduction">
+<node CREATED="1595839014780" ID="ID_344169287" MODIFIED="1599631120027" TEXT="introduction">
 <node CREATED="1595918384775" ID="ID_1773199168" MODIFIED="1595988599039" TEXT="compose.yml &#x4e00;&#x952e;&#x542f;&#x52a8;"/>
 <node CREATED="1595839054426" ID="ID_729416210" MODIFIED="1595839081522" TEXT="&#x624b;&#x52a8;&#x64cd;&#x4f5c;&#xff0c;&#x5355;&#x5bb9;&#x5668;">
 <node CREATED="1595839023489" ID="ID_1196160742" MODIFIED="1595839044245" TEXT="dockerfile -&gt; build -&gt; run"/>
@@ -2518,11 +2519,11 @@
 </node>
 </node>
 </node>
-<node CREATED="1595841932451" FOLDED="true" ID="ID_660741529" MODIFIED="1596162120379" TEXT="install">
+<node CREATED="1595841932451" ID="ID_660741529" MODIFIED="1599631060766" TEXT="install">
 <node CREATED="1595841937623" ID="ID_152636904" MODIFIED="1595841938418" TEXT="https://docs.docker.com/compose/install/"/>
 <node CREATED="1595842174905" ID="ID_1616713799" MODIFIED="1595842273424" TEXT="sudo curl -L &quot;https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose"/>
 </node>
-<node CREATED="1595917420133" FOLDED="true" ID="ID_1747057968" MODIFIED="1596003468923" TEXT="compose file">
+<node CREATED="1595917420133" ID="ID_1747057968" MODIFIED="1599631071511" TEXT="compose file">
 <node CREATED="1595917442984" ID="ID_708634399" MODIFIED="1595917443914" TEXT="https://docs.docker.com/compose/compose-file/"/>
 <node CREATED="1595917499873" ID="ID_407345875" MODIFIED="1595917641980" TEXT="3 types">
 <node CREATED="1595917510224" ID="ID_911259770" MODIFIED="1595917525488" TEXT="version: &quot;3&quot;"/>
@@ -2549,9 +2550,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1595900294123" FOLDED="true" ID="ID_1155969488" MODIFIED="1596003467163" TEXT="practice">
+<node CREATED="1595900294123" ID="ID_1155969488" MODIFIED="1599631075176" TEXT="practice">
 <node CREATED="1595900308172" HGAP="22" ID="ID_389515954" MODIFIED="1595988577743" TEXT="getting started (flask)" VSHIFT="-1">
-<node CREATED="1595900336710" ID="ID_1820013028" MODIFIED="1595900337405" TEXT="https://docs.docker.com/compose/gettingstarted/">
+<node CREATED="1595900336710" ID="ID_1820013028" MODIFIED="1599631482310" TEXT="https://docs.docker.com/compose/gettingstarted/">
 <node CREATED="1595908392143" ID="ID_183963543" MODIFIED="1595908408436" TEXT="operated process">
 <node CREATED="1595908211143" ID="ID_545213822" MODIFIED="1595908250522">
 <richcontent TYPE="NODE"><html>
@@ -2681,7 +2682,7 @@
 <node CREATED="1595990439878" ID="ID_1794603168" MODIFIED="1596001877738" TEXT="https://github.com/gwaysoft/java/tree/master/spring.io/docker-compose-demo"/>
 <node CREATED="1595990452359" ID="ID_464791139" MODIFIED="1595990479036" TEXT="Dockerfile: create image"/>
 <node CREATED="1595990482975" ID="ID_744218211" MODIFIED="1595990493067" TEXT="docker-compose.yml"/>
-<node CREATED="1595990496279" ID="ID_135254789" MODIFIED="1596002299166">
+<node CREATED="1595990496279" ID="ID_135254789" MODIFIED="1599639758738">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2691,14 +2692,15 @@
       # deploy to vm
     </p>
     <p>
-      docker-compose up --build
+      docker-compose up<b>&#160;<font color="#ff0000">--build</font></b>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1596002366990" FOLDED="true" ID="ID_1350745622" MODIFIED="1596162122397" TEXT="summary">
+<node CREATED="1596002366990" ID="ID_1350745622" MODIFIED="1599632818147" TEXT="summary">
 <node CREATED="1596002632783" ID="ID_354426954" MODIFIED="1596002642562" TEXT="compose 3 layers">
 <node CREATED="1596002373157" ID="ID_761864693" MODIFIED="1596002450562" TEXT="project"/>
 <node CREATED="1596002451750" ID="ID_1269293765" MODIFIED="1596002453598" TEXT="service"/>
@@ -2708,6 +2710,22 @@
 <node CREATED="1596002515542" ID="ID_179458970" MODIFIED="1596002531274" TEXT="kuberctl apply -f xx.yaml"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1599639785474" ID="ID_756399346" MODIFIED="1599639872017" TEXT="keng">
+<node CREATED="1599639793636" ID="ID_943106421" MODIFIED="1599639892728">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      docker-compose up<b>&#160;<font color="#ff0000">--build</font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1599639805746" ID="ID_1396241958" MODIFIED="1599639865431" TEXT="revise config file (e.g requirements.txt), must ass --build"/>
 </node>
 </node>
 </node>
@@ -2777,7 +2795,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595838861061" FOLDED="true" ID="ID_1716455956" MODIFIED="1596421762935" TEXT="up2">
+<node CREATED="1595838861061" ID="ID_1716455956" MODIFIED="1599642568596" TEXT="up2">
 <node CREATED="1595838825586" ID="ID_1352249452" MODIFIED="1595838839174" TEXT="docker stack"/>
 <node CREATED="1595838880867" ID="ID_1238865558" MODIFIED="1595838887637" TEXT="docker secret"/>
 <node CREATED="1595838868601" ID="ID_172269618" MODIFIED="1595838873912" TEXT="docker config"/>
@@ -2788,7 +2806,7 @@
 <node CREATED="1595929665299" ID="ID_641695097" MODIFIED="1595929667080" TEXT="docker"/>
 <node CREATED="1595929668419" ID="ID_89020490" MODIFIED="1595929670943" TEXT="k8s"/>
 </node>
-<node CREATED="1595838895678" ID="ID_1625342484" MODIFIED="1596422798633" POSITION="right" TEXT="k8s">
+<node CREATED="1595838895678" FOLDED="true" ID="ID_1625342484" MODIFIED="1599642566869" POSITION="right" TEXT="k8s">
 <node CREATED="1596422798633" FOLDED="true" ID="ID_1485614700" MODIFIED="1596426441408" TEXT="https://www.bilibili.com/video/BV1mt411u7An">
 <node CREATED="1596426420921" ID="ID_1392787760" MODIFIED="1596426437529">
 <richcontent TYPE="NODE"><html>
@@ -2798,8 +2816,7 @@
   <body>
     <img src="docker_k8s_pic/k8s_overview.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1596422620479" ID="ID_1549814070" MODIFIED="1596422624666" TEXT="install">
@@ -2826,8 +2843,7 @@
       kubeadm join &lt;master ip:port&gt;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1596422628248" ID="ID_510269283" MODIFIED="1596422631613" TEXT="&#x4e8c;&#x8fdb;&#x5236;"/>
@@ -2914,8 +2930,7 @@
       $ sysctl --system
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1596425258974" ID="ID_841262265" MODIFIED="1596425265167" TEXT="install">
@@ -2944,8 +2959,7 @@
       Docker version 18.06.1-ce, build e68fc7a
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -2988,8 +3002,7 @@
       EOF
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1596432222607" ID="ID_50046635" MODIFIED="1596439092816">
@@ -3005,8 +3018,7 @@
       yum install -y --nogpgcheck kubelet kubeadm kubectl
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596426617697" ID="ID_947844336" MODIFIED="1596440936476">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3096,8 +3108,7 @@
       CentOS Linux release 7.8.2003 (Core)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596448045490" ID="ID_7415538" MODIFIED="1596448057663" TEXT="view centos edition"/>
 </node>
 <node CREATED="1596448071658" ID="ID_154373255" MODIFIED="1596448789537">
@@ -3110,8 +3121,7 @@
       vi /etc/hosts
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596448774459" ID="ID_1596253089" MODIFIED="1596448782716">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3128,8 +3138,7 @@
       192.168.2.12 node2
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1596448139563" ID="ID_880666427" MODIFIED="1596448159327" TEXT="vi /etc/hostname"/>
@@ -3156,8 +3165,7 @@
       SELINUX=disabled
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596448347874" ID="ID_1557449999" MODIFIED="1596448366039" TEXT="for file permission"/>
 </node>
 <node CREATED="1596448478602" ID="ID_874542804" MODIFIED="1596448484677">
@@ -3185,8 +3193,7 @@
       sed -i 's/.*swap.*/#&amp;/' /etc/fstab
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596448486707" ID="ID_824548682" MODIFIED="1596448494367" TEXT="swapoff"/>
 </node>
 <node CREATED="1596448538307" ID="ID_139835814" MODIFIED="1596448545514">
@@ -3202,8 +3209,7 @@
       ntpdate time.windows.com
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1596448621491" ID="ID_920314067" MODIFIED="1596448688587">
 <richcontent TYPE="NODE"><html>
@@ -3236,8 +3242,7 @@
       sysctl -p
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1596448727019" ID="ID_1969684964" MODIFIED="1596448761091">
 <richcontent TYPE="NODE"><html>
@@ -3252,8 +3257,7 @@
       vi kubernetes.repo
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1596448762371" ID="ID_1397809584" MODIFIED="1596448765188">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3282,8 +3286,7 @@
       wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -3314,8 +3317,7 @@
       EOF
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1596449385875" ID="ID_39185656" MODIFIED="1596449546313">
 <richcontent TYPE="NODE"><html>
@@ -3333,8 +3335,7 @@
       systemctl start&#160;docker
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1596449488246" ID="ID_1994359067" MODIFIED="1596449583018">
 <richcontent TYPE="NODE"><html>
@@ -3349,8 +3350,7 @@
       systemctl start&#160;kubelet
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1596449584834" ID="ID_342940448" MODIFIED="1596449588265">
 <richcontent TYPE="NODE"><html>
@@ -3362,8 +3362,7 @@
       kubeadm init --apiserver-advertise-address=192.168.2.10 --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.18.0 --service-cidr=10.96.0.0/12 --pod-network-cidr=10.244.0.0/16
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -3394,8 +3393,7 @@
       --pod-network-cidr=10.244.0.0/16
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
