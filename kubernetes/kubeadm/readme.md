@@ -8,7 +8,7 @@ sh ../../docker/docker-ce/centos7_docker-ce.sh
 ## step3. yum install -y kubelet kubeadm kubectl 
 sh .centos7_kubernetes.sh
 
-### check
+#### check
 rpm -aq | grep kube 
 kubectl-1.19.2-0.x86_64
 kubernetes-cni-0.8.7-0.x86_64
