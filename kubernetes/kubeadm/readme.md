@@ -1,15 +1,17 @@
 #step1. centos7_prerequisite_kubeadm.sh
+
 sh .centos7_prerequisite_kubeadm.sh
 
 #step2. yum -y install docker-ce
-----
+
 sh ../../docker/docker-ce/centos7_docker-ce.sh
 
 #step3. yum install -y kubelet kubeadm kubectl 
-----
+
 sh .centos7_kubernetes.sh
 
 ##check
+
 rpm -aq | grep kube 
 kubectl-1.19.2-0.x86_64
 kubernetes-cni-0.8.7-0.x86_64
@@ -17,7 +19,7 @@ kubeadm-1.19.2-0.x86_64
 kubelet-1.19.2-0.x86_64
 
 #step4. master
-----
+
 kubeadm init \
 --apiserver-advertise-address=192.168.2.70 \
 --image-repository registry.aliyuncs.com/google_containers \
