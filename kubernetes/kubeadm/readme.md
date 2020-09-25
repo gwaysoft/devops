@@ -42,7 +42,7 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 ## step5. Then you can join any number of worker nodes by running the following on each as root:
 
-### A. 
+### A. kubeadm join
 kubeadm join 192.168.2.70:6443 --token fw4sph.rkuwl0qytsudcrnu \
     --discovery-token-ca-cert-hash sha256:50d67e1b76244264bac93cede8d88e8e4a496e8b6f1e5576776d3abfca0525e6
 
@@ -62,7 +62,7 @@ This node has joined the cluster:
 
 Run 'kubectl get nodes' on the control-plane to see this node join the cluster. 
 
-### B. 
+### B. kubeadm reset
 kubeadm reset
 [preflight] Some fatal errors occurred:
 	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
