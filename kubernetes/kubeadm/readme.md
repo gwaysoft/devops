@@ -16,14 +16,6 @@ kubeadm-1.19.2-0.x86_64
 kubelet-1.19.2-0.x86_64
 
 ## step4. master
-kubeadm init \
---apiserver-advertise-address=192.168.2.70 \
---image-repository registry.aliyuncs.com/google_containers \
---kubernetes-version v1.19.1 \
---service-cidr=10.1.0.0/16 \
---pod-network-cidr=10.244.0.0/16 \
---token-ttl=0
-
 [WARNING Service-Docker]: docker service is not enabled, please run 'systemctl enable docker.service'
 [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
 [ERROR NumCPU]: the number of available CPUs 1 is less than the required 2
@@ -40,6 +32,15 @@ To start using your cluster, you need to run the following as a regular user:
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+  
+#### C. kubeadm init
+kubeadm init \
+--apiserver-advertise-address=192.168.2.70 \
+--image-repository registry.aliyuncs.com/google_containers \
+--kubernetes-version v1.19.1 \
+--service-cidr=10.1.0.0/16 \
+--pod-network-cidr=10.244.0.0/16 \
+--token-ttl=0
 
 ## step5. Then you can join any number of worker nodes by running the following on each as root:
 
