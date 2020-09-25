@@ -5,19 +5,19 @@
 ##### 五级标题
 ###### 六级标题
 
-#step1. centos7_prerequisite_kubeadm.sh
+# step1. centos7_prerequisite_kubeadm.sh
 
 sh .centos7_prerequisite_kubeadm.sh
 
-#step2. yum -y install docker-ce
+# step2. yum -y install docker-ce
 
 sh ../../docker/docker-ce/centos7_docker-ce.sh
 
-#step3. yum install -y kubelet kubeadm kubectl 
+# step3. yum install -y kubelet kubeadm kubectl 
 
 sh .centos7_kubernetes.sh
 
-##check
+## check
 
 rpm -aq | grep kube 
 kubectl-1.19.2-0.x86_64
@@ -25,7 +25,7 @@ kubernetes-cni-0.8.7-0.x86_64
 kubeadm-1.19.2-0.x86_64
 kubelet-1.19.2-0.x86_64
 
-#step4. master
+# step4. master
 
 kubeadm init \
 --apiserver-advertise-address=192.168.2.70 \
@@ -51,7 +51,7 @@ You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
-step5. Then you can join any number of worker nodes by running the following on each as root:
+# step5. Then you can join any number of worker nodes by running the following on each as root:
 ----
 kubeadm join 192.168.2.70:6443 --token fw4sph.rkuwl0qytsudcrnu \
     --discovery-token-ca-cert-hash sha256:50d67e1b76244264bac93cede8d88e8e4a496e8b6f1e5576776d3abfca0525e6
