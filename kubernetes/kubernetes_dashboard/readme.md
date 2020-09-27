@@ -1,8 +1,7 @@
-# https://github.com/kubernetes/dashboard/releases
-
 # apply dashboard
 ### check and pull image recommended.yaml
-docker pull kubernetesui/dashboard:v2.0.4
+    # https://github.com/kubernetes/dashboard/releases
+    docker pull kubernetesui/dashboard:v2.0.4
 
 ### revise recommended.yaml
 #### A.
@@ -29,11 +28,11 @@ docker pull kubernetesui/dashboard:v2.0.4
             - --token-ttl=43200 # add token disable time
 
 ### apply
-kubectl apply -f recommended.yaml 
+    kubectl apply -f recommended.yaml 
 
 # add account
-kubectl apply -f dashboard-admin.yaml
-kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep dashboard-admin | awk '{print $1}')
+    kubectl apply -f dashboard-admin.yaml
+    kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep dashboard-admin | awk '{print $1}')
 
 # add token to access kubernetes dashboard
-https://192.168.2.72:30000/
+    https://192.168.2.72:30000/
