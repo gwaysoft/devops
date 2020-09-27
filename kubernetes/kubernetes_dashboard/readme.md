@@ -34,3 +34,6 @@ kubectl apply -f recommended.yaml
 # add account
 kubectl apply -f dashboard-admin.yaml
 kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep dashboard-admin | awk '{print $1}')
+
+# add token to access kubernetes dashboard
+https://192.168.2.72:30000/
