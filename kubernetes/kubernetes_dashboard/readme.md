@@ -6,20 +6,20 @@ docker pull kubernetesui/dashboard:v2.0.4
 
 ### revise recommended.yaml
 #### A.
-kind: Service
-apiVersion: v1
-metadata:
-  labels:
-    k8s-app: kubernetes-dashboard
-  name: kubernetes-dashboard
-  namespace: kubernetes-dashboard
-spec:
-  type: NodePort #增加
-  ports:
-    - port: 443
-      targetPort: 8443
-      nodePort: 30000 #增加
-  selector:
+    kind: Service
+    apiVersion: v1
+    metadata:
+      labels:
+        k8s-app: kubernetes-dashboard
+      name: kubernetes-dashboard
+      namespace: kubernetes-dashboard
+    spec:
+      type: NodePort #增加
+      ports:
+        - port: 443
+          targetPort: 8443
+          nodePort: 30000 #增加
+      selector:
     k8s-app: kubernetes-dashboard
     
 #### B.
