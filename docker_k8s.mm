@@ -3165,7 +3165,7 @@
 </node>
 </node>
 <node CREATED="1595838895678" ID="ID_1625342484" MODIFIED="1600655100705" POSITION="right" TEXT="k8s">
-<node CREATED="1596422798633" FOLDED="true" ID="ID_1485614700" MODIFIED="1601188934695" TEXT="https://www.bilibili.com/video/BV1mt411u7An">
+<node CREATED="1596422798633" FOLDED="true" ID="ID_1485614700" MODIFIED="1601345824411" TEXT="https://www.bilibili.com/video/BV1mt411u7An">
 <node CREATED="1601187880730" ID="ID_1145325599" MODIFIED="1601187882199" TEXT="https://blog.51cto.com/lizhenliang"/>
 <node CREATED="1596426420921" ID="ID_1392787760" MODIFIED="1596426437529">
 <richcontent TYPE="NODE"><html>
@@ -3180,7 +3180,7 @@
 </node>
 <node CREATED="1601188956699" ID="ID_1211086339" MODIFIED="1601188985677" TEXT="basic">
 <node CREATED="1601188988050" ID="ID_1222548955" MODIFIED="1601189188964" TEXT="https://kubernetes.io/docs/tutorials/kubernetes-basics/"/>
-<node CREATED="1601189192506" ID="ID_178689987" MODIFIED="1601197330395" TEXT="concepts">
+<node CREATED="1601189192506" FOLDED="true" ID="ID_178689987" MODIFIED="1601345967972" TEXT="concepts">
 <node CREATED="1601198913122" ID="ID_1226084366" MODIFIED="1601198923435" TEXT="overview">
 <node CREATED="1601198925378" ID="ID_607910166" MODIFIED="1601198940943" TEXT="kubernetes components">
 <node CREATED="1601198941986" ID="ID_409391663" MODIFIED="1601198982785" TEXT="control plan components">
@@ -3238,7 +3238,7 @@
 </node>
 </node>
 <node CREATED="1601199883466" ID="ID_614860273" MODIFIED="1601199898052" TEXT="deployment">
-<node CREATED="1596422620479" ID="ID_1549814070" MODIFIED="1601188938459" TEXT="kubeadm">
+<node CREATED="1596422620479" FOLDED="true" ID="ID_1549814070" MODIFIED="1601345964539" TEXT="kubeadm">
 <node CREATED="1596422423540" ID="ID_861241205" MODIFIED="1600670084720" TEXT="introduce">
 <node CREATED="1600668629747" ID="ID_941273313" MODIFIED="1600668669661" TEXT="kubernetes&#x552f;&#x4e00;&#x539f;&#x751f;&#x90e8;&#x7f72;&#x5de5;&#x5177;"/>
 <node CREATED="1596422638944" ID="ID_1569654556" MODIFIED="1596422718781">
@@ -3811,7 +3811,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1600669988811" FOLDED="true" ID="ID_273760934" MODIFIED="1601188120751" TEXT="cluster">
+<node CREATED="1600669988811" FOLDED="true" ID="ID_273760934" MODIFIED="1601345953468" TEXT="cluster">
 <node CREATED="1596435621615" ID="ID_1256662929" MODIFIED="1600670023904" TEXT="kubeadm init (master)">
 <node CREATED="1596435637159" ID="ID_1444188170" MODIFIED="1600853783782">
 <richcontent TYPE="NODE"><html>
@@ -3975,13 +3975,433 @@
 <node CREATED="1600762881873" ID="ID_1211234287" MODIFIED="1600762884001" TEXT="kubectl get cm -n kube-system"/>
 <node CREATED="1600763125040" ID="ID_1778610554" MODIFIED="1600763125565" TEXT="kubectl edit cm kube-proxy -n kube-system"/>
 <node CREATED="1600857241742" ID="ID_112775324" MODIFIED="1600857243035" TEXT="kubeadm token list"/>
+<node CREATED="1601276562434" ID="ID_123519943" MODIFIED="1601276563263" TEXT="kubectl get pods -n kube-system -o wide"/>
 </node>
 </node>
 </node>
-<node CREATED="1601199965834" ID="ID_1897571507" MODIFIED="1601199972962" TEXT="&#x4e8c;&#x8fdb;&#x5236;"/>
+<node CREATED="1601199965834" FOLDED="true" ID="ID_1897571507" MODIFIED="1601345962107" TEXT="&#x4e8c;&#x8fdb;&#x5236;">
+<node CREATED="1601264296132" ID="ID_993240390" MODIFIED="1601264305128" TEXT="install docker-ce"/>
+<node CREATED="1601264306587" ID="ID_544563310" MODIFIED="1601264547337" TEXT="generate ca">
+<node CREATED="1601264547337" ID="ID_27310361" MODIFIED="1601264576040" TEXT="&#x4e5f;&#x53ef;&#x4ee5;&#x4e0d;&#x7528;ca&#xff0c;&#x5982;&#x679c;&#x90fd;&#x5728;&#x5185;&#x7f51;"/>
+<node CREATED="1601264327139" ID="ID_546729088" MODIFIED="1601264610528" TEXT="cfssl, as same as openssl"/>
+<node CREATED="1601264411195" ID="ID_1822613557" MODIFIED="1601264426715">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="docker_k8s_pic/kubernetes_ca.png" />
+  </body>
+</html>
+</richcontent>
 </node>
-<node CREATED="1601173735857" ID="ID_1955062420" MODIFIED="1601173745254" TEXT="practice">
-<node CREATED="1601188941850" ID="ID_1751824608" MODIFIED="1601188945135" TEXT="nginx">
+</node>
+<node CREATED="1601272410521" ID="ID_1581861290" MODIFIED="1601275265892" TEXT="deploy etcd cluster">
+<node CREATED="1601272593721" ID="ID_617790330" MODIFIED="1601272768974" TEXT="mkdir /opt/kubernetes/{bin,cfg.bin}"/>
+<node CREATED="1601272707057" ID="ID_848814313" MODIFIED="1601272708590" TEXT="https://github.com/etcd-io/etcd"/>
+<node CREATED="1601273908081" ID="ID_1245776147" MODIFIED="1601273908654" TEXT="https://github.com/etcd-io/etcd/releases"/>
+</node>
+<node CREATED="1601272940929" ID="ID_1091878939" MODIFIED="1601276547137" TEXT="deploy flannel cluster">
+<node CREATED="1601272999777" ID="ID_860514190" MODIFIED="1601273011823" TEXT="overlay network">
+<node CREATED="1601274249393" ID="ID_1311838470" MODIFIED="1601274265046" TEXT="&#x5177;&#x4f53;&#x5b9e;&#x73b0; vxlan"/>
+</node>
+<node CREATED="1601274435034" ID="ID_1600924938" MODIFIED="1601274466246" TEXT="flannel, &#x662f;overlay&#x7f51;&#x7edc;&#x4e00;&#x79cd;">
+<node CREATED="1601274468193" ID="ID_627311125" MODIFIED="1601274481150" TEXT="&#x652f;&#x6301;vxlan.aws vpc"/>
+</node>
+<node CREATED="1601275202953" ID="ID_1936664998" MODIFIED="1601275217374" TEXT="pod&#x4e4b;&#x95f4;&#x901a;&#x4fe1;"/>
+</node>
+<node CREATED="1601277201178" ID="ID_270869724" MODIFIED="1601277213443" TEXT="deploy kubernetes master">
+<node CREATED="1601277213443" ID="ID_1657455722" MODIFIED="1601277300319" TEXT="https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.19.md#server-binaries"/>
+</node>
+</node>
+</node>
+<node CREATED="1601284733393" ID="ID_1355515811" MODIFIED="1601284741287" TEXT="command">
+<node CREATED="1601346016343" ID="ID_1665964432" MODIFIED="1601346048144" TEXT="Basic Commands (Beginner)">
+<node CREATED="1601349289511" ID="ID_1191901616" MODIFIED="1601360953192" TEXT="create"/>
+<node CREATED="1601360956247" ID="ID_929213823" MODIFIED="1601360960577" TEXT="expose"/>
+<node CREATED="1601347161903" ID="ID_499493166" MODIFIED="1601347164652" TEXT="run"/>
+<node CREATED="1601360943607" ID="ID_1993685604" MODIFIED="1601360944428" TEXT="set"/>
+</node>
+<node CREATED="1601284981857" ID="ID_1960647811" MODIFIED="1601285149885" TEXT="Basic Commands (Intermediate)">
+<node CREATED="1601285005930" ID="ID_1854256900" MODIFIED="1601285006654" TEXT="get">
+<node CREATED="1601284750025" ID="ID_170668973" MODIFIED="1601284751334" TEXT="kubectl get all -A -o wide"/>
+<node CREATED="1601348045943" ID="ID_553188507" MODIFIED="1601348046700" TEXT="kubectl get pods --show-labels=true "/>
+</node>
+<node CREATED="1601285017233" ID="ID_1521649929" MODIFIED="1601285019855" TEXT="edit">
+<node CREATED="1601285102779" ID="ID_116351903" MODIFIED="1601285103464" TEXT="kubectl edit deployment/nginx"/>
+</node>
+<node CREATED="1601346050879" ID="ID_622644684" MODIFIED="1601346054835" TEXT="delete"/>
+</node>
+<node CREATED="1601284951962" ID="ID_631703404" MODIFIED="1601285002846" TEXT="Troubleshooting and Debugging Commands">
+<node CREATED="1601284958322" FOLDED="true" ID="ID_1108521129" MODIFIED="1601286023351" TEXT="describe">
+<node CREATED="1601284974514" ID="ID_1901284318" MODIFIED="1601284975966" TEXT="kubectl describe deployment.app/nginx"/>
+<node CREATED="1601285688738" ID="ID_1456536915" MODIFIED="1601285691918" TEXT="kubectl describe pod/nginx-6799fc88d8-ljr28"/>
+</node>
+<node CREATED="1601285794586" ID="ID_1624819498" MODIFIED="1601285796363" TEXT="logs">
+<node CREATED="1601285796363" ID="ID_2178023" MODIFIED="1601285798094" TEXT="kubectl logs nginx-6799fc88d8-ljr28 "/>
+</node>
+<node CREATED="1601286025161" ID="ID_598430457" MODIFIED="1601286026598" TEXT="exec">
+<node CREATED="1601286027402" ID="ID_21705841" MODIFIED="1601286028919" TEXT="kubectl exec -it nginx-6799fc88d8-ljr28 -- bash"/>
+</node>
+</node>
+<node CREATED="1601285291098" ID="ID_1149449009" MODIFIED="1601285295723" TEXT="Deploy Commands">
+<node CREATED="1601285295723" ID="ID_1901188043" MODIFIED="1601285297935" TEXT="scale">
+<node CREATED="1601285283538" ID="ID_26942753" MODIFIED="1601285285347" TEXT="kubectl scale --replicas=2 deployment/nginx "/>
+</node>
+</node>
+<node CREATED="1601372431329" ID="ID_848210303" MODIFIED="1601372436977" TEXT="Setting Commands">
+<node CREATED="1601372436978" ID="ID_111261265" MODIFIED="1601372439898" TEXT="label">
+<node CREATED="1601372439899" ID="ID_42175956" MODIFIED="1601372452210">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kubectl label node k8s-node1 env=dev
+    </p>
+    <p>
+      kubectl describe node k8s-node1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1601363001057" ID="ID_1979348778" MODIFIED="1601363007723" TEXT="yaml">
+<node CREATED="1601363061817" ID="ID_1967234572" MODIFIED="1601363065150" TEXT="apiVersion">
+<node CREATED="1601363057209" ID="ID_155957010" MODIFIED="1601363057981" TEXT="kubectl api-versions"/>
+</node>
+<node CREATED="1601363254728" ID="ID_192482364" MODIFIED="1601363256837" TEXT="get">
+<node CREATED="1601363257673" ID="ID_181068259" MODIFIED="1601363265055">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;[root@k8s-master ~]# kubectl get deployment nginx -o yaml
+    </p>
+    <p>
+      apiVersion: apps/v1
+    </p>
+    <p>
+      kind: Deployment
+    </p>
+    <p>
+      metadata:
+    </p>
+    <p>
+      &#160;&#160;annotations:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;deployment.kubernetes.io/revision: &quot;1&quot;
+    </p>
+    <p>
+      &#160;&#160;creationTimestamp: &quot;2020-09-28T12:15:28Z&quot;
+    </p>
+    <p>
+      &#160;&#160;generation: 1
+    </p>
+    <p>
+      &#160;&#160;labels:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;app: nginx
+    </p>
+    <p>
+      &#160;&#160;managedFields:
+    </p>
+    <p>
+      &#160;&#160;- apiVersion: apps/v1
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;fieldsType: FieldsV1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1601363285369" ID="ID_297532414" MODIFIED="1601363289231">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master ~]# kubectl get deployment nginx -o json
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&quot;apiVersion&quot;: &quot;apps/v1&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&quot;kind&quot;: &quot;Deployment&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&quot;metadata&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;annotations&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;deployment.kubernetes.io/revision&quot;: &quot;1&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;creationTimestamp&quot;: &quot;2020-09-28T12:15:28Z&quot;,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;generation&quot;: 1,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;labels&quot;: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;app&quot;: &quot;nginx&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1601372802273" ID="ID_153809257" MODIFIED="1601372803886" TEXT="pod">
+<node CREATED="1601372809137" ID="ID_335200277" MODIFIED="1601372815596" TEXT="&#x6307;&#x5b9a;node">
+<node CREATED="1601372509497" ID="ID_1546712513" MODIFIED="1601372781032">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # &#24378;&#21046;&#25351;&#23450;pod&#36816;&#34892;&#30340;node&#33410;&#28857;
+    </p>
+    <p>
+      Pod.spec.nodeName
+    </p>
+    <p>
+      # &#26681;&#25454;node&#30340;label&#35774;&#23450;&#65292;&#25351;&#23450;node&#33410;&#28857;
+    </p>
+    <p>
+      # &#35774;&#26377;env-dev, label&#30340;node&#33410;&#28857;
+    </p>
+    <p>
+      # kubectl label node k8s-node1 env=dev
+    </p>
+    <p>
+      Pod.spec.nodeSelector
+    </p>
+    <p>
+      &#160;&#160;env-dev
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1601372818329" ID="ID_846777624" MODIFIED="1601372824134" TEXT="&#x91cd;&#x542f;&#x7b56;&#x7565;">
+<node CREATED="1601372832617" ID="ID_1425941494" MODIFIED="1601372849038" TEXT="Pod.spec.restartPolicy">
+<node CREATED="1601372850649" ID="ID_1537578130" MODIFIED="1601372859534" TEXT="Always">
+<node CREATED="1601372887017" ID="ID_1413727710" MODIFIED="1601372889214" TEXT="default"/>
+</node>
+<node CREATED="1601372862545" ID="ID_1873590412" MODIFIED="1601372870782" TEXT="onFailure">
+<node CREATED="1601372900425" ID="ID_540148906" MODIFIED="1601372916341" TEXT="!0"/>
+</node>
+<node CREATED="1601372873161" ID="ID_893661336" MODIFIED="1601372874942" TEXT="Never"/>
+</node>
+</node>
+<node CREATED="1601372966033" ID="ID_455053886" MODIFIED="1601372974070" TEXT="&#x5065;&#x5eb7;&#x68c0;&#x67e5;">
+<node CREATED="1601372993017" ID="ID_1842869764" MODIFIED="1601372996620" TEXT="Probe">
+<node CREATED="1601372999577" ID="ID_1623875285" MODIFIED="1601373009158" TEXT="livenessProbe">
+<node CREATED="1601373035305" ID="ID_1426947462" MODIFIED="1601373058742" TEXT="&#x6839;&#x636e;restartPolicy&#x5904;&#x7406;"/>
+</node>
+<node CREATED="1601373016895" ID="ID_128071282" MODIFIED="1601373022910" TEXT="readinessProbe">
+<node CREATED="1601373070017" ID="ID_1376043807" MODIFIED="1601373085694" TEXT="&#x5931;&#x8d25;&#x4f1a;&#x628a;pod&#x4ece;service&#x4e2d;&#x5254;&#x9664;"/>
+</node>
+</node>
+<node CREATED="1601373102497" ID="ID_881596278" MODIFIED="1601373107418" TEXT="check">
+<node CREATED="1601373107419" ID="ID_455966244" MODIFIED="1601373116341" TEXT="httpGet">
+<node CREATED="1601373151513" ID="ID_1764998290" MODIFIED="1601373177854" TEXT="return 200~400, normally"/>
+</node>
+<node CREATED="1601373119001" ID="ID_250478006" MODIFIED="1601373120813" TEXT="exec">
+<node CREATED="1601373313714" ID="ID_715688064" MODIFIED="1601373315743" TEXT="shell">
+<node CREATED="1601373423265" ID="ID_1707208279" MODIFIED="1601373459733">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      touch a
+    </p>
+    <p>
+      [ -e &quot;a&quot; ] &amp;&amp; echo 1 || echo 0
+    </p>
+    <p>
+      1
+    </p>
+    <p>
+      rm -f a
+    </p>
+    <p>
+      [ -e &quot;a&quot; ] &amp;&amp; echo 1 || echo 0
+    </p>
+    <p>
+      0
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1601373492265" ID="ID_1556052797" MODIFIED="1601373503226" TEXT="replace exit to echo">
+<node CREATED="1601373503226" ID="ID_1465883253" MODIFIED="1601373528438" TEXT="!0, exception"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1601373124361" ID="ID_359018807" MODIFIED="1601373135854" TEXT="tcpSocket"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1601173735857" ID="ID_1955062420" MODIFIED="1601345972938" TEXT="practice">
+<node CREATED="1601368484201" ID="ID_502195070" MODIFIED="1601368487141" TEXT="nginx">
+<node CREATED="1601188941850" FOLDED="true" ID="ID_1751824608" MODIFIED="1601368496581" TEXT="command">
+<node CREATED="1601348442783" ID="ID_1958268127" MODIFIED="1601366385179" TEXT="kubectl create">
+<node CREATED="1601346568543" ID="ID_1503146654" MODIFIED="1601351699234" TEXT="kubectl delete">
+<node CREATED="1601346065359" ID="ID_1706289121" MODIFIED="1601348318352">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kubectl get all -o wide
+    </p>
+    <p>
+      # delete deployment (pod) and service
+    </p>
+    <p>
+      kubectl delete deployment.apps/nginx
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1601348582919" ID="ID_1052281945" MODIFIED="1601348921284">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # create pod with deployment
+    </p>
+    <p>
+      kubectl create deployment nginx --image=nginx --port=80 --replicas=3
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601351210911" ID="ID_1121114068" MODIFIED="1601351220844" TEXT="check">
+<node CREATED="1601351107991" ID="ID_911619168" MODIFIED="1601351131963" TEXT="curl 10.244.3.8"/>
+<node CREATED="1601348050551" ID="ID_1128722469" MODIFIED="1601348058067" TEXT="kubectl get">
+<node CREATED="1601348613887" ID="ID_895385641" MODIFIED="1601351158191">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master kubernetes]# kubectl get all -o wide --show-labels=true
+    </p>
+    <p>
+      NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;READY&#160;&#160;&#160;STATUS&#160;&#160;&#160;&#160;RESTARTS&#160;&#160;&#160;AGE&#160;&#160;&#160;IP&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;NODE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NOMINATED NODE&#160;&#160;&#160;READINESS GATES&#160;&#160;&#160;LABELS
+    </p>
+    <p>
+      pod/nginx-7848d4b86f-dtx9v&#160;&#160;&#160;1/1&#160;&#160;&#160;&#160;&#160;Running&#160;&#160;&#160;0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;90s&#160;&#160; 10.244.3.8&#160;&#160;&#160;k8s-node1&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; app=nginx,pod-template-hash=7848d4b86f
+    </p>
+    <p>
+      pod/nginx-7848d4b86f-g2g72&#160;&#160;&#160;1/1&#160;&#160;&#160;&#160;&#160;Running&#160;&#160;&#160;0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;90s&#160;&#160; 10.244.2.8&#160;&#160;&#160;k8s-node2&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; app=nginx,pod-template-hash=7848d4b86f
+    </p>
+    <p>
+      pod/nginx-7848d4b86f-jvtrn&#160;&#160;&#160;1/1&#160;&#160;&#160;&#160;&#160;Running&#160;&#160;&#160;0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;90s&#160;&#160; 10.244.2.9&#160;&#160;&#160;k8s-node2&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; app=nginx,pod-template-hash=7848d4b86f
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;READY&#160;&#160;&#160;UP-TO-DATE&#160;&#160;&#160;AVAILABLE&#160;&#160;&#160;AGE&#160;&#160; CONTAINERS&#160;&#160;&#160;IMAGES&#160;&#160;&#160;SELECTOR&#160;&#160;&#160;&#160;LABELS
+    </p>
+    <p>
+      deployment.apps/nginx&#160;&#160;&#160;3/3&#160;&#160;&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;90s&#160;&#160;&#160;nginx&#160;&#160;&#160;&#160; &#160;&#160;&#160;nginx&#160;&#160;&#160;&#160;app=nginx&#160;&#160;&#160;app=nginx
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DESIRED&#160;&#160;&#160;CURRENT&#160;&#160;&#160;READY&#160;&#160;&#160;AGE&#160;&#160; CONTAINERS&#160;&#160;&#160;IMAGES&#160;&#160;&#160;SELECTOR&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;LABELS
+    </p>
+    <p>
+      replicaset.apps/nginx-7848d4b86f&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3&#160;&#160;&#160;&#160;&#160;&#160;&#160;90s&#160;&#160; nginx&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;nginx&#160;&#160;&#160;&#160;app=nginx,pod-template-hash=7848d4b86f&#160;&#160; app=nginx,pod-template-hash=7848d4b86f
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601348058839" ID="ID_583394859" MODIFIED="1601348625977">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kubectl get pod -L name=myNginx
+    </p>
+    <p>
+      kubectl get pods --show-labels=true
+    </p>
+    <p>
+      kubectl get deployment -A
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1601349260703" ID="ID_582350709" MODIFIED="1601349267602" TEXT="kubectl describe">
+<node CREATED="1601349269879" ID="ID_725701539" MODIFIED="1601349271131" TEXT="kubectl describe deployment.apps/nginx"/>
+</node>
+</node>
+<node CREATED="1601347149663" ID="ID_1133649258" MODIFIED="1601351232412" TEXT="kubectl run (deprecated)">
+<node CREATED="1601347154083" ID="ID_1871091064" MODIFIED="1601347404877">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font size="3">[root@k8s-master kubernetes]# kubectl run nginx --image=nginx --labels=&quot;app=myNginx&quot; --port=80 --replicas=3 </font>
+    </p>
+    <p>
+      <font size="3"># please use deployment to create pod </font>
+    </p>
+    <p>
+      <font size="3">Flag --replicas has been deprecated, has no effect and will be removed in the future. </font>
+    </p>
+    <p>
+      <font size="3">pod/nginx created</font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
 <node CREATED="1601173750825" ID="ID_1617188541" MODIFIED="1601174366549">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -4005,6 +4425,205 @@
     </p>
   </body>
 </html></richcontent>
+</node>
+<node CREATED="1601351007927" ID="ID_1884135593" MODIFIED="1601366336948" TEXT="kubectl expose">
+<node CREATED="1601351017679" ID="ID_1315413507" MODIFIED="1601351553277">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # <font color="#ff0000">--target-port=80</font>&#160;=== kubectl create deployment nginx --image=nginx <font color="#ff0000">--port=80</font>&#160;--replicas=3
+    </p>
+    <p>
+      kubectl expose deployment nginx --name=nginx-service --port=8000 --target-port=80 --type=NodePort
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601351317191" ID="ID_480243104" MODIFIED="1601351318636" TEXT="check">
+<node CREATED="1601351235015" ID="ID_872875353" MODIFIED="1601351568086">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master kubernetes]# kubectl get svc -o wide
+    </p>
+    <p>
+      NAME&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;TYPE&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;CLUSTER-IP&#160;&#160;&#160;&#160;EXTERNAL-IP&#160;&#160;&#160;PORT(S)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; AGE&#160;&#160;&#160;&#160;SELECTOR
+    </p>
+    <p>
+      kubernetes&#160;&#160;&#160;&#160;&#160;&#160;ClusterIP&#160;&#160;&#160;10.1.0.1&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;443/TCP&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 5d3h&#160;&#160;&#160;&lt;none&gt;
+    </p>
+    <p>
+      nginx-service&#160;&#160;&#160;NodePort&#160;&#160;&#160;&#160;10.1.19.172&#160;&#160;&#160;&lt;none&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;8000:30653/TCP&#160;&#160; 81s&#160;&#160;&#160;&#160;app=nginx
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601351241839" ID="ID_640152391" MODIFIED="1601351639663">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      curl 10.1.19.172:8000
+    </p>
+    <p>
+      curl 192.168.2.71:30653
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601351397075" ID="ID_843761999" MODIFIED="1601351622878">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master kubernetes]# kubectl describe service nginx-service
+    </p>
+    <p>
+      Name:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;nginx-service
+    </p>
+    <p>
+      Namespace:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;default
+    </p>
+    <p>
+      Labels:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;app=nginx
+    </p>
+    <p>
+      Annotations:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;
+    </p>
+    <p>
+      Selector:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;app=nginx
+    </p>
+    <p>
+      Type:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;NodePort
+    </p>
+    <p>
+      IP:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;10.1.19.172
+    </p>
+    <p>
+      Port:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;unset&gt;&#160;&#160;8000/TCP
+    </p>
+    <p>
+      TargetPort:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;80/TCP
+    </p>
+    <p>
+      NodePort:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;unset&gt;&#160;&#160;30653/TCP
+    </p>
+    <p>
+      Endpoints:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;10.244.2.8:80,10.244.2.9:80,10.244.3.8:80
+    </p>
+    <p>
+      Session Affinity:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;None
+    </p>
+    <p>
+      External Traffic Policy:&#160;&#160;Cluster
+    </p>
+    <p>
+      Events:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;none&gt;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1601360574895" ID="ID_856771154" MODIFIED="1601360575612" TEXT="kubectl logs replicaset.apps/nginx-7848d4b86f"/>
+</node>
+<node CREATED="1601360054488" ID="ID_287818416" MODIFIED="1601360059104" TEXT="iptables">
+<node CREATED="1601360059104" ID="ID_500157190" MODIFIED="1601360330067">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master kubernetes]# clear
+    </p>
+    <p>
+      [root@k8s-master kubernetes]# iptables-save|grep default/nginx-service
+    </p>
+    <p>
+      -A KUBE-NODEPORTS -p tcp -m comment --comment &quot;default/nginx-service&quot; -m tcp --dport 30653 -j KUBE-MARK-MASQ
+    </p>
+    <p>
+      -A KUBE-NODEPORTS -p tcp -m comment --comment &quot;default/nginx-service&quot; -m tcp --dport 30653 -j KUBE-SVC-V2OKYYMBY3REGZOG
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -A KUBE-SEP-64W4DQNBVTNQDCSW -s 10.244.2.9/32 -m comment --comment &quot;default/nginx-service&quot; -j KUBE-MARK-MASQ
+    </p>
+    <p>
+      -A KUBE-SEP-64W4DQNBVTNQDCSW -p tcp -m comment --comment &quot;default/nginx-service&quot; -m tcp -j DNAT --to-destination 10.244.2.9:80
+    </p>
+    <p>
+      -A KUBE-SEP-7AO37YX7EASDQZXJ -s 10.244.3.8/32 -m comment --comment &quot;default/nginx-service&quot; -j KUBE-MARK-MASQ
+    </p>
+    <p>
+      -A KUBE-SEP-7AO37YX7EASDQZXJ -p tcp -m comment --comment &quot;default/nginx-service&quot; -m tcp -j DNAT --to-destination 10.244.3.8:80
+    </p>
+    <p>
+      -A KUBE-SEP-IAYGC7IGM3JW3JZ7 -s 10.244.2.8/32 -m comment --comment &quot;default/nginx-service&quot; -j KUBE-MARK-MASQ
+    </p>
+    <p>
+      -A KUBE-SEP-IAYGC7IGM3JW3JZ7 -p tcp -m comment --comment &quot;default/nginx-service&quot; -m tcp -j DNAT --to-destination 10.244.2.8:80
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -A KUBE-SERVICES ! -s 10.244.0.0/16 -d 10.1.19.172/32 -p tcp -m comment --comment &quot;default/nginx-service cluster IP&quot; -m tcp --dport 8000 -j KUBE-MARK-MASQ
+    </p>
+    <p>
+      -A KUBE-SERVICES -d 10.1.19.172/32 -p tcp -m comment --comment &quot;default/nginx-service cluster IP&quot; -m tcp --dport 8000 -j KUBE-SVC-V2OKYYMBY3REGZOG
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      -A KUBE-SVC-V2OKYYMBY3REGZOG -m comment --comment &quot;default/nginx-service&quot; -m statistic --mode random --probability 0.33333333349 -j KUBE-SEP-IAYGC7IGM3JW3JZ7
+    </p>
+    <p>
+      -A KUBE-SVC-V2OKYYMBY3REGZOG -m comment --comment &quot;default/nginx-service&quot; -m statistic --mode random --probability 0.50000000000 -j KUBE-SEP-64W4DQNBVTNQDCSW
+    </p>
+    <p>
+      -A KUBE-SVC-V2OKYYMBY3REGZOG -m comment --comment &quot;default/nginx-service&quot; -j KUBE-SEP-7AO37YX7EASDQZXJ
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1601351664695" ID="ID_14004423" MODIFIED="1601360364417" TEXT="kubectl delete service/nginx-service"/>
+</node>
+<node CREATED="1601360795295" ID="ID_29345089" MODIFIED="1601360811112" TEXT="troubleshooting">
+<node CREATED="1601360811113" ID="ID_1962457417" MODIFIED="1601360822868" TEXT="kubectl describe"/>
+<node CREATED="1601360824183" ID="ID_286308680" MODIFIED="1601360828708" TEXT="kubectl logs"/>
+<node CREATED="1601360829895" ID="ID_1260228141" MODIFIED="1601360837075" TEXT="kubectl exce"/>
+</node>
+<node CREATED="1601361324976" ID="ID_774315979" MODIFIED="1601361327441" TEXT="change">
+<node CREATED="1601361327442" ID="ID_1321697754" MODIFIED="1601361328463" TEXT="kubectl edit deployment.apps/nginx"/>
+<node CREATED="1601361329953" ID="ID_1400906051" MODIFIED="1601361334262" TEXT="kubectl set"/>
+<node CREATED="1601362446425" ID="ID_918976986" MODIFIED="1601362457173" TEXT="&#x56de;&#x6eda;">
+<node CREATED="1601361571362" ID="ID_109469951" MODIFIED="1601361572007" TEXT="kubectl rollout history deployment.apps/nginx">
+<node CREATED="1601362463897" ID="ID_1868309940" MODIFIED="1601362480269" TEXT="view history"/>
+</node>
+<node CREATED="1601362483432" ID="ID_1214038320" MODIFIED="1601362505549" TEXT="kubectl rollout undo deployment.apps/nginx"/>
+</node>
+<node CREATED="1601362667713" ID="ID_1159006594" MODIFIED="1601362672093" TEXT="kubectl scale"/>
+</node>
+<node CREATED="1601362700600" ID="ID_1759023173" MODIFIED="1601362706085" TEXT="kubectl delete"/>
+</node>
+<node CREATED="1601368491105" ID="ID_957580396" MODIFIED="1601368492845" TEXT="yaml">
+<node CREATED="1601368510512" ID="ID_1726021515" MODIFIED="1601368511237" TEXT="kubectl create -f nginx-test.yaml"/>
+<node CREATED="1601368523737" ID="ID_1663595858" MODIFIED="1601368524533" TEXT="kubectl get all -n nginx-namespace-yaml -o wide --show-labels"/>
+<node CREATED="1601368947585" ID="ID_510036307" MODIFIED="1601368948542" TEXT="kubectl delete ns nginx-namespace-yaml"/>
 </node>
 </node>
 </node>

@@ -1,0 +1,50 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: nginx-namespace-yaml
+
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nginx-deployment-yaml
+  namespace: nginx-namespace-yaml
+  labels:
+    deployment: nginx-deployment-label-yaml
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      pod: nginx-pod-label-yaml
+  template:
+    metadata:
+      labels:
+        pod: nginx-pod-label-yaml
+    spec:
+      containers:
+        - name: nginx-container-yaml
+          image: nginx:1.10
+          ports:
+            - containerPort: 80
+     
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service-yaml
+  namespace: nginx-namespace-yaml
+  labels:
+    service: nginx-service-label-yaml
+spec:
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 80
+      nodePort: 30110
+  selector:
+    pod: nginx-pod-label-yaml
+  type: NodePort
+
+
