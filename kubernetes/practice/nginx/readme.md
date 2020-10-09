@@ -1,4 +1,4 @@
-## *.yaml  
+## *.yaml (lifecycle)
     kubectl create -f nginx-test.yaml
     kubectl get all -n nginx-namespace-yaml -o wide --show-labels
     # delete all of resources
@@ -21,25 +21,27 @@
     3         <none>
     
     kubectl delete -f nginx-test.yaml
+    
+### check
+    [root@k8s-master ~]# kubectl get all -n nginx-namespace-yaml -o wide --show-labels
+    NAME                                         READY   STATUS    RESTARTS   AGE     IP            NODE        NOMINATED NODE   READINESS GATES   LABELS
+    pod/nginx-deployment-yaml-78b98f7cbb-8mvn4   1/1     Running   0          5m49s   10.244.2.22   k8s-node2   <none>           <none>            pod-template-hash=78b98f7cbb,pod=nginx-pod-label-yaml
+    pod/nginx-deployment-yaml-78b98f7cbb-r4qsf   1/1     Running   0          5m49s   10.244.3.15   k8s-node1   <none>           <none>            pod-template-hash=78b98f7cbb,pod=nginx-pod-label-yaml
+    pod/nginx-deployment-yaml-78b98f7cbb-tqxqg   1/1     Running   0          5m49s   10.244.2.23   k8s-node2   <none>           <none>            pod-template-hash=78b98f7cbb,pod=nginx-pod-label-yaml
+    
+    NAME                         TYPE       CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE     SELECTOR                   LABELS
+    service/nginx-service-yaml   NodePort   10.1.215.50   <none>        8000:30110/TCP   5m50s   pod=nginx-pod-label-yaml   service=nginx-service-label-yaml
+    
+    NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS             IMAGES       SELECTOR                   LABELS
+    deployment.apps/nginx-deployment-yaml   3/3     3            3           5m50s   nginx-container-yaml   nginx:1.10   pod=nginx-pod-label-yaml   deployment=nginx-deployment-label-yaml
+    
+    NAME                                               DESIRED   CURRENT   READY   AGE     CONTAINERS             IMAGES       SELECTOR                                                LABELS
+    replicaset.apps/nginx-deployment-yaml-78b98f7cbb   3         3         3       5m50s   nginx-container-yaml   nginx:1.10   pod=nginx-pod-label-yaml,pod-template-hash=78b98f7cbb   pod-template-hash=78b98f7cbb,pod=nginx-pod-label-yaml
 
-## command
-    simple.sh
-    
-## test
-    [root@k8s-master kubernetes]# kubectl get pod,svc -o wide
-    NAME                         READY   STATUS    RESTARTS   AGE    IP           NODE        NOMINATED NODE   READINESS GATES
-    pod/nginx-6799fc88d8-56l6s   1/1     Running   0          15h    10.244.2.3   k8s-node2   <none>           <none>
-    pod/nginx-controller-gk9k4   1/1     Running   0          2d8h   10.244.3.3   k8s-node1   <none>           <none>
-    pod/nginx-controller-s5qzp   1/1     Running   0          2d8h   10.244.2.2   k8s-node2   <none>           <none>
-    
-    NAME                             TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE    SELECTOR
-    service/kubernetes               ClusterIP   10.1.0.1       <none>        443/TCP          4d8h   <none>
-    service/nginx                    NodePort    10.1.81.249    <none>        80:30782/TCP     15h    app=nginx
-    service/nginx-service-nodeport   NodePort    10.1.154.141   <none>        8000:30080/TCP   2d8h   name=nginx
     
 ### access at hosted machine
-    http://192.168.2.71:30080
-    http://192.168.2.72:30080
+    http://192.168.2.71:30110
+    http://192.168.2.72:30110
     
 ##### view logs
     [root@k8s-master kubernetes]# kubectl logs nginx-6799fc88d8-56l6s
@@ -59,4 +61,7 @@
             font-family: Tahoma, Verdana, Arial, sans-serif;
         }
     </style>
+    
+## command
+    simple.sh
 
