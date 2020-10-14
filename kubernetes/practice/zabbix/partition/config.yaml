@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  namespace: zabbix
+data:
+  MYSQL_DATABASE: "zabbix"

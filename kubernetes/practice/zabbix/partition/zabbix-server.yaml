@@ -52,28 +52,16 @@ spec:
               port: zabbix-trapper
             initialDelaySeconds: 15
             periodSeconds: 20
+          envFrom:
+            - secretRef:
+                name: db-secret
+            - configMapRef:
+                name: db-config
           env:
             - name: ZBX_SERVER_NAME
               value: "Zabbix kubernetes"
             - name: PHP_TZ
               value: "Europe/Riga"
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-zbx-user
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-zbx-pass
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-root-pass
-            - name: MYSQL_DATABASE
-              value: "zabbix"
             - name: ZBX_JAVAGATEWAY_ENABLE
               value: "true"
             - name: ZBX_STARTJAVAPOLLERS

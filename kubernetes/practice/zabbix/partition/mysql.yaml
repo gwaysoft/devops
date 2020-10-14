@@ -41,24 +41,11 @@ spec:
           ports:
             - containerPort: 3306
               name: mysql
-          env:
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-zbx-user
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-zbx-pass
-            - name: MYSQL_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: db-root-pass
-            - name: MYSQL_DATABASE
-              value: "zabbix"
+          envFrom:
+            - secretRef:
+                name: db-secret
+            - configMapRef:
+                name: db-config
           volumeMounts:
             - mountPath: "/var/lib/mysql/"
               name: zabbix-mysql-data

@@ -14,28 +14,10 @@
     kubectl apply -f secret.yaml
     kubectl delete -f secret.yaml
 #### keng
-    [root@k8s-master partition]# echo zabbix | base64
-    emFiYml4Cg==
-    
-    # in secret.yaml
-    stringData:
-      db-zbx-user: zabbix
-      db-zbx-pass: zabbix
-      db-root-pass: root_pwd
-    
-    [root@k8s-master partition]# kubectl get secret db-secret -n zabbix -o yaml
-    apiVersion: v1
-    data:
-      db-root-pass: cm9vdF9wd2Q=
-      db-zbx-pass: emFiYml4
-      db-zbx-user: emFiYml4
-    kind: Secret
-    metadata:
-      annotations:
-        kubectl.kubernetes.io/last-applied-configuration: |
-          {"apiVersion":"v1","kind":"Secret","metadata":{"annotations":{},"name":"db-secret","namespace":"zabbix"},"stringData":{"db-root-pass":"root_pwd","db-zbx-pass":"zabbix","db-zbx-user":"zabbix"},"type":"Opaque"}
+    # https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-config-file/
+    [root@k8s-master partition]# echo -n 'zabbix' | base64
+    emFiYml4
 
-    the same encoding of zabbix is not equivalent
 #### check 
     # Notice: echo zabbix | base64
     [root@k8s-master partition]# kubectl get secret db-secret -n zabbix -o yaml
@@ -50,8 +32,6 @@
         kubectl.kubernetes.io/last-applied-configuration: |
           {"apiVersion":"v1","data":{"db-root-pass":"cm9vdF9wd2Q=","db-zbx-pass":"emFiYml4","db-zbx-user":"emFiYml4"},"kind":"Secret","metadata":{"annotations":{},"name":"db-secret","namespace":"zabbix"},"type":"Opaque"}
 
-
-   
     [root@k8s-master ~]# kubectl describe secret db-secret -n zabbix
     Name:         db-secret
     Namespace:    zabbix
@@ -65,6 +45,14 @@
     db-root-pass:  14 bytes
     db-zbx-pass:   12 bytes
     db-zbx-user:   6 bytes
+### configMap
+    [root@k8s-master partition]# kubectl get configMap -n zabbix -o yaml
+    apiVersion: v1
+    items:
+    - apiVersion: v1
+      data:
+        MYSQL_DATABASE: zabbix
+
 ### mysql
     [root@k8s-master partition]# kubectl apply -f mysql.yaml
     service/mysql-server created
@@ -175,6 +163,20 @@
     service/zabbix-web      NodePort    10.1.206.184   <none>        80:30757/TCP,443:32757/TCP   75s
 #### url: http://192.168.2.72:30757/
     Admin | zabbix
+### zabbix-agent
+    [ root@curl:/ ]$ curl 10.244.3.87:10051
+    curl: (52) Empty reply from server
+    [ root@curl:/ ]$ curl zabbix-server.zabbix:10051
+    curl: (52) Empty reply from server
+    [ root@curl:/ ]$ curl 10.1.28.237:10051
+    curl: (52) Empty reply from server
+    [ root@curl:/ ]$ curl zabbix-server:10051
+    curl: (6) Couldn't resolve host 'zabbix-server'
+    [ root@curl:/ ]$ curl zabbix-server.zabbix:10051
+    
+    91:20201014:050858.384 no active checks on server [zabbix-server:10051]: host [zabbix-agent-w44gx] not found
+    91:20201014:051058.520 no active checks on server [zabbix-server:10051]: host [zabbix-agent-w44gx] not found
+
 
 
 
