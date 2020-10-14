@@ -65,13 +65,13 @@
     db-root-pass:  14 bytes
     db-zbx-pass:   12 bytes
     db-zbx-user:   6 bytes
-## mysql
+### mysql
     [root@k8s-master partition]# kubectl apply -f mysql.yaml
     service/mysql-server created
     replicationcontroller/mysql-server created
     persistentvolume/zabbix-mysql-data created
     persistentvolumeclaim/zabbix-mysql-data-claim created
-### check mysql
+#### check mysql
     [root@k8s-master partition]# kubectl exec -it mysql-server-ctz6p -n zabbix -- bash
     root@mysql-server-ctz6p:/# mysql -uroot -proot_pwd -hmysql-server
     
@@ -94,7 +94,7 @@
     Database changed
     mysql> show tables;
 
-### check resources
+#### check resources
     [root@k8s-master partition]# kubectl get all -n zabbix
     NAME                     READY   STATUS    RESTARTS   AGE
     pod/mysql-server-ctz6p   1/1     Running   0          47s
@@ -105,7 +105,7 @@
     NAME                   TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
     service/mysql-server   ClusterIP   10.1.138.119   <none>        3306/TCP   47s
 
-### check dns
+#### check dns
     [root@k8s-master partition]# kubectl exec curl -- nslookup mysql-server.zabbix
     Server:    10.1.0.10
     Address 1: 10.1.0.10 kube-dns.kube-system.svc.cluster.local
@@ -113,15 +113,15 @@
     Name:      mysql-server.zabbix
     Address 1: 10.1.138.119 mysql-server.zabbix.svc.cluster.local
     
-### check volumes
+#### check volumes
     [root@k8s-master partition]# kubectl get persistentvolumeclaim,PersistentVolume -n zabbix -o yaml | grep path
         {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"labels":{"type":"local"},"name":"zabbix-mysql-data"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"1Gi"},"hostPath":{"path":"/data"}}}
             f:path: {}
       path: /data
-#### delete nodes' mysql volumes
+##### delete nodes' mysql volumes
     rm -fr /data
     
-## zabbix-server
+### zabbix-server
     [root@k8s-master partition]# kubectl apply -f zabbix-server.yaml 
     service/zabbix-server created
     replicationcontroller/zabbix-server created
@@ -132,7 +132,7 @@
     [root@k8s-master partition]# kubectl delete -f zabbix-server.yaml 
     service "zabbix-server" deleted
     replicationcontroller "zabbix-server" deleted
-## zabbix web 
+### zabbix web 
     [root@k8s-master partition]# kubectl apply -f zabbix-web.yaml 
     service/zabbix-web created
     replicationcontroller/zabbix-web created
@@ -156,7 +156,7 @@
     service "zabbix-web" deleted
     replicationcontroller "zabbix-web" deleted
     
-### check
+#### check
     [root@k8s-master partition]# kubectl get all -n zabbix
     NAME                      READY   STATUS    RESTARTS   AGE
     pod/mysql-server-r2rnh    1/1     Running   0          11m
@@ -173,7 +173,7 @@
     service/mysql-server    ClusterIP   10.1.117.214   <none>        3306/TCP                     11m
     service/zabbix-server   ClusterIP   10.1.136.182   <none>        10051/TCP,162/UDP            3m53s
     service/zabbix-web      NodePort    10.1.206.184   <none>        80:30757/TCP,443:32757/TCP   75s
-### url: http://192.168.2.72:30757/
+#### url: http://192.168.2.72:30757/
     Admin | zabbix
 
 
