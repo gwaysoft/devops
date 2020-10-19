@@ -23,7 +23,7 @@ sudo service docker start
 # 配置镜像加速器
 # https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
 sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <<-'EOF'
+sudo tee > /etc/docker/daemon.json <<-'EOF'
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "registry-mirrors": ["https://5gvjxvqt.mirror.aliyuncs.com"]
