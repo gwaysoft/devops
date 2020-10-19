@@ -1,4 +1,17 @@
-## vi /etc/sysconfig/network-scripts/ifcfg-ens33
+# install CentOS7
+## download
+    http://mirrors.aliyun.com/centos/7.8.2003/isos/x86_64/
+    CentOS-7-x86_64-Minimal-2003.iso
+## install at vmware 15
+
+### vmware
+    select CentOS-7-x86_64-Minimal-2003.iso
+    select default installation
+### centos
+    set root | root
+    
+## set network
+### vi /etc/sysconfig/network-scripts/ifcfg-ens33
     TYPE=Ethernet
     PROXY_METHOD=none
     BROWSER_ONLY=no

@@ -1,5 +1,5 @@
  ## manual
-    # set ip
-    sh init.sh
+    # set network
+    sh os/centos/vmware/clone/network.sh
     # set network time protocol
-    sh ntp.sh
+    sh os/centos/install/ntp/ntp.sh
