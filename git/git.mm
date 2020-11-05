@@ -1,7 +1,193 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1583387457705" ID="ID_481882907" MODIFIED="1583934151922" TEXT="Git &amp; GitHub">
-<node CREATED="1583934085158" ID="ID_1600407662" MODIFIED="1592540136408" POSITION="left" TEXT="Pro Git book">
+<node CREATED="1583387457705" ID="ID_481882907" MODIFIED="1604387499631" TEXT="Git &amp; GitHub &amp; GitLab">
+<node CREATED="1592538346691" ID="ID_1437740448" MODIFIED="1604387527116" POSITION="right" TEXT="git">
+<node CREATED="1604545605596" ID="ID_454143517" MODIFIED="1604545621138" TEXT="basic">
+<node CREATED="1604388997415" ID="ID_355238379" MODIFIED="1604389005676" TEXT="introduce">
+<node CREATED="1604389005676" ID="ID_400780691" MODIFIED="1604389017116" TEXT="git vs svn">
+<node CREATED="1604389017116" ID="ID_598232442" MODIFIED="1604389029234" TEXT="git is distribution"/>
+</node>
+</node>
+<node CREATED="1604545640897" ID="ID_1391812628" MODIFIED="1604545644662" TEXT="file">
+<node CREATED="1592538349835" ID="ID_170865751" MODIFIED="1592538356201" TEXT=".gitignore">
+<node CREATED="1602735941255" ID="ID_539917474" MODIFIED="1602735958131" TEXT="https://www.jianshu.com/p/1c74f84e56b4"/>
+</node>
+<node CREATED="1604545648190" ID="ID_892323234" MODIFIED="1604545752930" TEXT=".git/index">
+<node CREATED="1604545752930" ID="ID_551762434" MODIFIED="1604545755850" TEXT="https://www.bilibili.com/video/BV1Vv411C7gn?p=7"/>
+<node CREATED="1604545656187" ID="ID_308787366" MODIFIED="1604545660686" TEXT="stage"/>
+</node>
+</node>
+</node>
+<node CREATED="1592545029521" ID="ID_1633232455" MODIFIED="1592545038284" TEXT="command">
+<node CREATED="1592545039146" ID="ID_280546282" MODIFIED="1592545041223" TEXT="git config">
+<node CREATED="1604546189978" ID="ID_473200135" MODIFIED="1604546193786" TEXT="https://www.bilibili.com/video/BV1Vv411C7gn?p=8"/>
+<node CREATED="1604546330429" ID="ID_1881247530" MODIFIED="1604546333930" TEXT="location">
+<node CREATED="1604546334977" ID="ID_366243872" MODIFIED="1604546341686" TEXT="/etc/gitconfig">
+<node CREATED="1604546391770" ID="ID_1760759041" MODIFIED="1604546435301" TEXT="git config --system -l"/>
+</node>
+<node CREATED="1604546342929" ID="ID_1546433034" MODIFIED="1604546357020" TEXT="~/.gitconfig">
+<node CREATED="1604546437673" ID="ID_247307981" MODIFIED="1604546447709" TEXT="git config --global -l"/>
+</node>
+<node CREATED="1604546542945" ID="ID_1014516575" MODIFIED="1604546674766" TEXT="xxx.git/.git/config">
+<node CREATED="1604546555042" ID="ID_1814943191" MODIFIED="1604546564293" TEXT="git config --local -l">
+<node CREATED="1604546761457" ID="ID_323384164" MODIFIED="1604546773828">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [root@k8s-master .git]# cat config
+    </p>
+    <p>
+      [core]
+    </p>
+    <p>
+      repositoryformatversion = 0
+    </p>
+    <p>
+      filemode = true
+    </p>
+    <p>
+      bare = false
+    </p>
+    <p>
+      logallrefupdates = true
+    </p>
+    <p>
+      [remote &quot;origin&quot;]
+    </p>
+    <p>
+      url = git@192.168.2.30:/git-root/bgm.git
+    </p>
+    <p>
+      fetch = +refs/heads/*:refs/remotes/origin/*
+    </p>
+    <p>
+      [branch &quot;master&quot;]
+    </p>
+    <p>
+      remote = origin
+    </p>
+    <p>
+      merge = refs/heads/master
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1604546833162" ID="ID_813980505" MODIFIED="1604546851814" TEXT="git push origin master">
+<node CREATED="1604546851814" ID="ID_1995050165" MODIFIED="1604546871430" TEXT="origin: remote url"/>
+<node CREATED="1604546873033" ID="ID_90463321" MODIFIED="1604546880637" TEXT="master: remote branch"/>
+</node>
+</node>
+</node>
+<node CREATED="1604546696593" ID="ID_1686296774" MODIFIED="1604546702718" TEXT="bare=false"/>
+</node>
+<node CREATED="1604546658052" ID="ID_1454948918" MODIFIED="1604546684077" TEXT="xxx.git/config">
+<node CREATED="1604546555042" ID="ID_1580649834" MODIFIED="1604546564293" TEXT="git config --local -l"/>
+<node CREATED="1604546696593" ID="ID_316494685" MODIFIED="1604546712981" TEXT="bare=true"/>
+</node>
+<node CREATED="1604547013370" ID="ID_842744699" MODIFIED="1604547035015" TEXT="recover local -&gt; global -&gt; system"/>
+</node>
+<node CREATED="1604547054025" ID="ID_358300250" MODIFIED="1604547225311" TEXT="configuration info">
+<node CREATED="1604547227169" ID="ID_469948147" MODIFIED="1604547245253" TEXT="user.name user.email">
+<node CREATED="1604547256353" ID="ID_495349142" MODIFIED="1604547278365" TEXT="have to set user info before git push"/>
+<node CREATED="1604547110609" ID="ID_1997373398" MODIFIED="1604547137572" TEXT="git config --global user.name xxxx"/>
+<node CREATED="1604547139672" ID="ID_967764005" MODIFIED="1604547166494" TEXT="git config --global user.email yyy@email.com"/>
+</node>
+</node>
+<node CREATED="1604547170440" ID="ID_1164609902" MODIFIED="1604547182595" TEXT="command">
+<node CREATED="1592545042468" ID="ID_1256484083" MODIFIED="1592546201160" TEXT="git config [--global | --system | --local] [-e | -l]">
+<node CREATED="1592546027800" ID="ID_1194596742" MODIFIED="1592546041060" TEXT="[--global | --system | --local] ">
+<node CREATED="1592546143052" ID="ID_1615751641" MODIFIED="1592546154961" TEXT="default --local">
+<node CREATED="1592546156253" ID="ID_752266746" MODIFIED="1592546165483" TEXT="git config -e"/>
+</node>
+</node>
+<node CREATED="1592546054883" ID="ID_35251290" MODIFIED="1592546057090" TEXT="[-e | -l]">
+<node CREATED="1592546105405" ID="ID_1044881122" MODIFIED="1592546127743" TEXT="-e | --edit"/>
+<node CREATED="1592546129147" ID="ID_147793651" MODIFIED="1592546135784" TEXT="-l | --list"/>
+</node>
+</node>
+<node CREATED="1592546182192" ID="ID_750247214" MODIFIED="1592548569932" TEXT="git config [--global | --system | --local] &lt;key&gt; &lt;value&gt;">
+<node CREATED="1592546271287" ID="ID_539113612" MODIFIED="1592546290225" TEXT="default --local">
+<node CREATED="1592546290226" ID="ID_572459238" MODIFIED="1592546349032" TEXT="git config user.name gwaysoft_test">
+<node CREATED="1592546377394" ID="ID_143210978" MODIFIED="1592546390971">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [user]
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;name = gwaysoft_test
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1592546417826" ID="ID_663871475" MODIFIED="1592548577312" TEXT="git config [--global | --system | [--get] &lt;key&gt;"/>
+<node CREATED="1592546437587" ID="ID_1189123038" MODIFIED="1592548572815" TEXT="git config [--global | --system | --local] [--unset] &lt;key&gt; &lt;value&gt;">
+<node CREATED="1592546458915" ID="ID_906468534" MODIFIED="1592546464080" TEXT="remove">
+<node CREATED="1592546464080" ID="ID_1494418025" MODIFIED="1592546472683" TEXT="git config [--global | --system | --local] [--unset] key">
+<node CREATED="1592546526308" ID="ID_1431424393" MODIFIED="1592546545141" TEXT="git config --unset user.name"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1592547392325" ID="ID_648327124" MODIFIED="1592547394740" TEXT="git remote">
+<node CREATED="1592547396392" ID="ID_1722671919" MODIFIED="1592547465539" TEXT="git remote [-v]">
+<node CREATED="1592547409578" ID="ID_779405579" MODIFIED="1592547422145" TEXT="-v | --verbose"/>
+</node>
+<node CREATED="1592547478932" ID="ID_623849858" MODIFIED="1592549111387" TEXT="git remote rename &lt;old&gt; &lt;new&gt;"/>
+<node CREATED="1592548741390" ID="ID_773551773" MODIFIED="1592549116003" TEXT="git remote remove &lt;name&gt;"/>
+<node CREATED="1592548755993" ID="ID_869635613" MODIFIED="1592549120387" TEXT="git remote add [-f] [-t &lt;branch&gt;] [-m &lt;master&gt;]  &lt;name&gt; &lt;url&gt;">
+<node CREATED="1592549473775" ID="ID_1561143969" MODIFIED="1592549477131" TEXT="&lt;url&gt;">
+<node CREATED="1592549478398" ID="ID_1323365809" MODIFIED="1592550420848" TEXT="https (best practice)">
+<node CREATED="1592549520634" ID="ID_468360715" MODIFIED="1595994274127" TEXT="git init"/>
+<node CREATED="1592550371505" ID="ID_1676907754" MODIFIED="1596607553662" TEXT="git remote add -f -t master -m master origin https://github.com/gwaysoft/frontend.git"/>
+<node CREATED="1593498203321" ID="ID_1400088928" MODIFIED="1593498206414" TEXT="git pull"/>
+<node CREATED="1592550840719" ID="ID_1590350194" MODIFIED="1592550845619" TEXT="git push --set-upstream origin master "/>
+</node>
+<node CREATED="1592549487071" ID="ID_657359788" MODIFIED="1592550365407" TEXT="ssh">
+<node CREATED="1592549538754" ID="ID_1679303222" MODIFIED="1592549539918" TEXT="git@github.com:gwaysoft/python.git"/>
+<node CREATED="1592550332585" ID="ID_32147894" MODIFIED="1592550368322" TEXT="git remote add -f -t master -m master origin git@github.com:gwaysoft/python.git"/>
+<node CREATED="1592549542856" ID="ID_1007206805" MODIFIED="1592549553510" TEXT="set ssh">
+<node CREATED="1592549596073" ID="ID_1932328921" MODIFIED="1592549606048" TEXT="setting -&gt; ssh keys">
+<node CREATED="1592549618251" ID="ID_1518688452" MODIFIED="1592549619574" TEXT="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh"/>
+</node>
+<node CREATED="1592549882384" ID="ID_667592442" MODIFIED="1592549886103" TEXT="steps">
+<node CREATED="1592549887576" ID="ID_217359969" MODIFIED="1592549953631" TEXT="checking">
+<node CREATED="1592549955852" ID="ID_1460329893" MODIFIED="1592549964702" TEXT=" cd ~/.ssh"/>
+<node CREATED="1592549983465" ID="ID_811398992" MODIFIED="1592549988318" TEXT="ll -a">
+<node CREATED="1592550025279" ID="ID_206067610" MODIFIED="1592550026503" TEXT="id_rsa  id_rsa.pub"/>
+</node>
+</node>
+<node CREATED="1592549997425" ID="ID_737700" MODIFIED="1592550037215" TEXT="not id_rsa-pub">
+<node CREATED="1592550042473" ID="ID_1890403074" MODIFIED="1592550047190" TEXT="generate">
+<node CREATED="1592550066535" ID="ID_1812930714" MODIFIED="1592550067879" TEXT="ssh-keygen -t rsa -b 4096 -C &quot;gwaysoft@icloud.com&quot; "/>
+<node CREATED="1592550070980" ID="ID_252687057" MODIFIED="1592550083197" TEXT="enter twice"/>
+</node>
+</node>
+<node CREATED="1592550130573" ID="ID_1389201044" MODIFIED="1592550157947" TEXT="new ssh key">
+<node CREATED="1592550087764" ID="ID_1596618631" MODIFIED="1592550118994" TEXT="cat ~/.ssh/id_rsa.pub"/>
+<node CREATED="1592550163857" ID="ID_1462291982" MODIFIED="1592550170442" TEXT="copy all"/>
+<node CREATED="1592550171814" ID="ID_901080973" MODIFIED="1592550215230" TEXT="past at setting -&gt; ssh keys -&gt; new ssh key"/>
+</node>
+</node>
+</node>
+<node CREATED="1592550840719" ID="ID_421982725" MODIFIED="1592550845619" TEXT="git push --set-upstream origin master "/>
+</node>
+</node>
+<node CREATED="1592550253350" ID="ID_1383450010" MODIFIED="1592550400563" TEXT="after than, git push [origin | origin_u]"/>
+</node>
+</node>
+</node>
+<node CREATED="1583934085158" FOLDED="true" ID="ID_1600407662" MODIFIED="1604545620097" TEXT="Pro Git book">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -11,8 +197,9 @@
       https://git-scm.com/book/en/v2
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1583396140476" ID="ID_1556745953" MODIFIED="1592535929121" TEXT="2. Git Basics">
+</html>
+</richcontent>
+<node CREATED="1583396140476" ID="ID_1556745953" MODIFIED="1604387601554" TEXT="2. Git Basics">
 <node CREATED="1583387551001" ID="ID_1300733150" MODIFIED="1586337882219" TEXT="2.1 Getting a Git Repository">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -584,6 +771,7 @@
 </node>
 </node>
 </node>
+</node>
 <node CREATED="1592532004617" ID="ID_118719522" MODIFIED="1592532027121" POSITION="right" TEXT="github">
 <node CREATED="1592532132817" ID="ID_98337258" MODIFIED="1592532135470" TEXT="account">
 <node CREATED="1592532142113" ID="ID_178567121" MODIFIED="1592532186534">
@@ -681,101 +869,6 @@
 </node>
 </node>
 </node>
-<node CREATED="1592538346691" ID="ID_1437740448" MODIFIED="1592538348736" POSITION="right" TEXT="git">
-<node CREATED="1592538349835" ID="ID_170865751" MODIFIED="1592538356201" TEXT=".gitignore">
-<node CREATED="1602735941255" ID="ID_539917474" MODIFIED="1602735958131" TEXT="https://www.jianshu.com/p/1c74f84e56b4"/>
-</node>
-<node CREATED="1592545029521" ID="ID_1633232455" MODIFIED="1592545038284" TEXT="command">
-<node CREATED="1592545039146" ID="ID_280546282" MODIFIED="1592545041223" TEXT="git config">
-<node CREATED="1592545042468" ID="ID_1256484083" MODIFIED="1592546201160" TEXT="git config [--global | --system | --local] [-e | -l]">
-<node CREATED="1592546027800" ID="ID_1194596742" MODIFIED="1592546041060" TEXT="[--global | --system | --local] ">
-<node CREATED="1592546143052" ID="ID_1615751641" MODIFIED="1592546154961" TEXT="default --local">
-<node CREATED="1592546156253" ID="ID_752266746" MODIFIED="1592546165483" TEXT="git config -e"/>
-</node>
-</node>
-<node CREATED="1592546054883" ID="ID_35251290" MODIFIED="1592546057090" TEXT="[-e | -l]">
-<node CREATED="1592546105405" ID="ID_1044881122" MODIFIED="1592546127743" TEXT="-e | --edit"/>
-<node CREATED="1592546129147" ID="ID_147793651" MODIFIED="1592546135784" TEXT="-l | --list"/>
-</node>
-</node>
-<node CREATED="1592546182192" ID="ID_750247214" MODIFIED="1592548569932" TEXT="git config [--global | --system | --local] &lt;key&gt; &lt;value&gt;">
-<node CREATED="1592546271287" ID="ID_539113612" MODIFIED="1592546290225" TEXT="default --local">
-<node CREATED="1592546290226" ID="ID_572459238" MODIFIED="1592546349032" TEXT="git config user.name gwaysoft_test">
-<node CREATED="1592546377394" ID="ID_143210978" MODIFIED="1592546390971">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      [user]
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;name = gwaysoft_test
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1592546417826" ID="ID_663871475" MODIFIED="1592548577312" TEXT="git config [--global | --system | [--get] &lt;key&gt;"/>
-<node CREATED="1592546437587" ID="ID_1189123038" MODIFIED="1592548572815" TEXT="git config [--global | --system | --local] [--unset] &lt;key&gt; &lt;value&gt;">
-<node CREATED="1592546458915" ID="ID_906468534" MODIFIED="1592546464080" TEXT="remove">
-<node CREATED="1592546464080" ID="ID_1494418025" MODIFIED="1592546472683" TEXT="git config [--global | --system | --local] [--unset] key">
-<node CREATED="1592546526308" ID="ID_1431424393" MODIFIED="1592546545141" TEXT="git config --unset user.name"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1592547392325" ID="ID_648327124" MODIFIED="1592547394740" TEXT="git remote">
-<node CREATED="1592547396392" ID="ID_1722671919" MODIFIED="1592547465539" TEXT="git remote [-v]">
-<node CREATED="1592547409578" ID="ID_779405579" MODIFIED="1592547422145" TEXT="-v | --verbose"/>
-</node>
-<node CREATED="1592547478932" ID="ID_623849858" MODIFIED="1592549111387" TEXT="git remote rename &lt;old&gt; &lt;new&gt;"/>
-<node CREATED="1592548741390" ID="ID_773551773" MODIFIED="1592549116003" TEXT="git remote remove &lt;name&gt;"/>
-<node CREATED="1592548755993" ID="ID_869635613" MODIFIED="1592549120387" TEXT="git remote add [-f] [-t &lt;branch&gt;] [-m &lt;master&gt;]  &lt;name&gt; &lt;url&gt;">
-<node CREATED="1592549473775" ID="ID_1561143969" MODIFIED="1592549477131" TEXT="&lt;url&gt;">
-<node CREATED="1592549478398" ID="ID_1323365809" MODIFIED="1592550420848" TEXT="https (best practice)">
-<node CREATED="1592549520634" ID="ID_468360715" MODIFIED="1595994274127" TEXT="git init"/>
-<node CREATED="1592550371505" ID="ID_1676907754" MODIFIED="1596607553662" TEXT="git remote add -f -t master -m master origin https://github.com/gwaysoft/frontend.git"/>
-<node CREATED="1593498203321" ID="ID_1400088928" MODIFIED="1593498206414" TEXT="git pull"/>
-<node CREATED="1592550840719" ID="ID_1590350194" MODIFIED="1592550845619" TEXT="git push --set-upstream origin master "/>
-</node>
-<node CREATED="1592549487071" ID="ID_657359788" MODIFIED="1592550365407" TEXT="ssh">
-<node CREATED="1592549538754" ID="ID_1679303222" MODIFIED="1592549539918" TEXT="git@github.com:gwaysoft/python.git"/>
-<node CREATED="1592550332585" ID="ID_32147894" MODIFIED="1592550368322" TEXT="git remote add -f -t master -m master origin git@github.com:gwaysoft/python.git"/>
-<node CREATED="1592549542856" ID="ID_1007206805" MODIFIED="1592549553510" TEXT="set ssh">
-<node CREATED="1592549596073" ID="ID_1932328921" MODIFIED="1592549606048" TEXT="setting -&gt; ssh keys">
-<node CREATED="1592549618251" ID="ID_1518688452" MODIFIED="1592549619574" TEXT="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh"/>
-</node>
-<node CREATED="1592549882384" ID="ID_667592442" MODIFIED="1592549886103" TEXT="steps">
-<node CREATED="1592549887576" ID="ID_217359969" MODIFIED="1592549953631" TEXT="checking">
-<node CREATED="1592549955852" ID="ID_1460329893" MODIFIED="1592549964702" TEXT=" cd ~/.ssh"/>
-<node CREATED="1592549983465" ID="ID_811398992" MODIFIED="1592549988318" TEXT="ll -a">
-<node CREATED="1592550025279" ID="ID_206067610" MODIFIED="1592550026503" TEXT="id_rsa  id_rsa.pub"/>
-</node>
-</node>
-<node CREATED="1592549997425" ID="ID_737700" MODIFIED="1592550037215" TEXT="not id_rsa-pub">
-<node CREATED="1592550042473" ID="ID_1890403074" MODIFIED="1592550047190" TEXT="generate">
-<node CREATED="1592550066535" ID="ID_1812930714" MODIFIED="1592550067879" TEXT="ssh-keygen -t rsa -b 4096 -C &quot;gwaysoft@icloud.com&quot; "/>
-<node CREATED="1592550070980" ID="ID_252687057" MODIFIED="1592550083197" TEXT="enter twice"/>
-</node>
-</node>
-<node CREATED="1592550130573" ID="ID_1389201044" MODIFIED="1592550157947" TEXT="new ssh key">
-<node CREATED="1592550087764" ID="ID_1596618631" MODIFIED="1592550118994" TEXT="cat ~/.ssh/id_rsa.pub"/>
-<node CREATED="1592550163857" ID="ID_1462291982" MODIFIED="1592550170442" TEXT="copy all"/>
-<node CREATED="1592550171814" ID="ID_901080973" MODIFIED="1592550215230" TEXT="past at setting -&gt; ssh keys -&gt; new ssh key"/>
-</node>
-</node>
-</node>
-<node CREATED="1592550840719" ID="ID_421982725" MODIFIED="1592550845619" TEXT="git push --set-upstream origin master "/>
-</node>
-</node>
-<node CREATED="1592550253350" ID="ID_1383450010" MODIFIED="1592550400563" TEXT="after than, git push [origin | origin_u]"/>
-</node>
-</node>
-</node>
-</node>
+<node CREATED="1604387450859" ID="ID_991014604" MODIFIED="1604387453786" POSITION="right" TEXT="gitlab"/>
 </node>
 </map>

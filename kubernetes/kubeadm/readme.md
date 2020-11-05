@@ -1,21 +1,26 @@
 # deploy docker and kuberadm
-## step1. centos7_prerequisite_kubeadm.sh
+## step1. yum -y install docker-ce (all)
+    sh ../../docker/docker-ce/centos7_docker-ce.sh
+    systemctl enable docker && systemctl start docker
+
+## step2. centos7_prerequisite_kubeadm.sh (all)
     sh .centos7_prerequisite_kubeadm.sh
 
-## step2. yum -y install docker-ce
-    sh ../../docker/docker-ce/centos7_docker-ce.sh
-
-## step3. yum install -y kubelet kubeadm kubectl 
+## step3. yum install -y kubelet kubeadm kubectl (all)
     sh .centos7_kubernetes.sh
+    systemctl enable kubelet && systemctl start kubelet
 
-#### check
+#### check (all)
     rpm -aq | grep kube 
     kubectl-1.19.2-0.x86_64
     kubernetes-cni-0.8.7-0.x86_64
     kubeadm-1.19.2-0.x86_64
     kubelet-1.19.2-0.x86_64
+    
+    [root@k8s-node1 ~]# kubeadm version
+    kubeadm version: &version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.2", GitCommit:"f5743093fd1c663cb0cbc89748f730662345d44d", GitTreeState:"clean", BuildDate:"2020-09-16T13:38:53Z", GoVersion:"go1.15", Compiler:"gc", Platform:"linux/amd64"}
 
-## step4. init master 
+## step4. init master (master)
 
 ### troubleshooting
     [WARNING Service-Docker]: docker service is not enabled, please run 'systemctl enable docker.service'
@@ -31,10 +36,12 @@
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-#### B. kubectl apply f .kube-flannel.yml
-    You should now deploy a pod network to the cluster.
-    Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-      https://kubernetes.io/docs/concepts/cluster-administration/addons/
+#### B. cni flannel
+    # docker pull quay.io/coreos/flannel:v0.12.0-amd64
+    # 192           - iface=ens33 # if more then ethernet cards, please appoint an ethernet card
+    kubectl apply -f .kube-flannel.yml
+    # You should now deploy a pod network to the cluster.
+    # Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at: https://kubernetes.io/docs/concepts/cluster-administration/addons/
   
 #### C. kubeadm init
     kubeadm init \
@@ -45,7 +52,8 @@
     --pod-network-cidr=10.244.0.0/16 \
     --token-ttl=0
 
-## step5. Then you can join any number of worker nodes by running the following on each as root:
+## step5. init nodes
+    Then you can join any number of worker nodes by running the following on each as root:
 
 #### A. kubeadm join
     kubeadm join 192.168.2.70:6443 --token fw4sph.rkuwl0qytsudcrnu \
@@ -75,3 +83,27 @@
     [preflight] Some fatal errors occurred:
         [ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
     echo '1'>/proc/sys/net/ipv4/ip_forward
+    
+## others
+### system pods
+    ls /etc/kubernetes/manifests
+#### resources
+    [root@k8s-master manifests]# kubectl api-resources
+    NAME                              SHORTNAMES   APIGROUP                       NAMESPACED   KIND
+    bindings                                                                      true         Binding
+    componentstatuses                 cs                                          false        ComponentStatus
+    configmaps                        cm                                          true         ConfigMap
+    
+    [root@k8s-master manifests]# kubectl explain pod.apiVersion
+    KIND:     Pod
+    VERSION:  v1
+    
+    FIELD:    apiVersion <string>
+    
+    DESCRIPTION:
+         APIVersion defines the versioned schema of this representation of an
+         object. Servers should convert recognized schemas to the latest internal
+         value, and may reject unrecognized values. More info:
+         https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+
+

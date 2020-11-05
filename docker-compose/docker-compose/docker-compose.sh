@@ -4,5 +4,5 @@ sleep 2
 chmod +x /usr/local/bin/docker-compose
 sleep 1
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-sleep
+sleep 2
 docker-compose --version

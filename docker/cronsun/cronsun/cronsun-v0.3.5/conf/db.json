@@ -1,6 +1,6 @@
 {
   "Hosts": [
-    "192.168.2.110:27017"
+    "192.168.2.30:27017"
   ],
   "Database": "cronsun",
   "#AuthSource": "AuthSource Specify the database name associated with the user’s credentials.",

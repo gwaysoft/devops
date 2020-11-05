@@ -1,16 +1,17 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1600657861314" ID="ID_1037865176" MODIFIED="1602213744516" TEXT="devops">
-<node CREATED="1600657868276" FOLDED="true" ID="ID_1926693498" MODIFIED="1600766633156" POSITION="right" TEXT="overview">
-<node CREATED="1600657875197" ID="ID_1644577482" MODIFIED="1600657923234">
+<node CREATED="1600657868276" FOLDED="true" ID="ID_1926693498" MODIFIED="1604386637534" POSITION="right" TEXT="overview">
+<node CREATED="1604386623075" ID="ID_579530504" MODIFIED="1604386633077">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
-    <img src="docker_k8s_pic/linux_sre.png" />
+    <img src="pictures/docker_kubernetes/linux_sre.png" />
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 <node CREATED="1600657927275" ID="ID_1408584681" MODIFIED="1602213699116" POSITION="left" TEXT="docker_kubernetes.mm"/>
@@ -34,5 +35,13 @@
 <node CREATED="1600768040746" ID="ID_1666996443" MODIFIED="1600768060119" TEXT="&#x5bb9;&#x5668;&#x548c;&#x5bb9;&#x5668;&#x7f16;&#x6392;&#x6210;&#x4e86;&#x65b0;&#x7684;&#x4ea4;&#x4ed8;&#x65b9;&#x5f0f;"/>
 </node>
 <node CREATED="1602213745591" ID="ID_280207645" MODIFIED="1602213749804" POSITION="left" TEXT="cicd.mm"/>
+<node CREATED="1604386678931" ID="ID_1867007710" MODIFIED="1604386692459" POSITION="right" TEXT="learn">
+<node CREATED="1604386842561" ID="ID_558884705" MODIFIED="1604386851885" TEXT="cicd">
+<node CREATED="1604386692461" ID="ID_181686792" MODIFIED="1604386693823" TEXT="https://www.bilibili.com/video/BV1Vv411C7gn"/>
+<node CREATED="1604386912331" ID="ID_988236662" MODIFIED="1604386915367" TEXT="introduce">
+<node CREATED="1604386919818" ID="ID_31687944" MODIFIED="1604387345059" TEXT="g"/>
+</node>
+</node>
+</node>
 </node>
 </map>
