@@ -1,8 +1,8 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1583387457705" ID="ID_481882907" MODIFIED="1604387499631" TEXT="Git &amp; GitHub &amp; GitLab">
-<node CREATED="1592538346691" ID="ID_1437740448" MODIFIED="1604387527116" POSITION="right" TEXT="git">
-<node CREATED="1604545605596" ID="ID_454143517" MODIFIED="1604545621138" TEXT="basic">
+<node CREATED="1592538346691" FOLDED="true" ID="ID_1437740448" MODIFIED="1604642969213" POSITION="right" TEXT="git">
+<node CREATED="1604545605596" FOLDED="true" ID="ID_454143517" MODIFIED="1604642967812" TEXT="basic">
 <node CREATED="1604388997415" ID="ID_355238379" MODIFIED="1604389005676" TEXT="introduce">
 <node CREATED="1604389005676" ID="ID_400780691" MODIFIED="1604389017116" TEXT="git vs svn">
 <node CREATED="1604389017116" ID="ID_598232442" MODIFIED="1604389029234" TEXT="git is distribution"/>
@@ -19,7 +19,144 @@
 </node>
 </node>
 <node CREATED="1592545029521" ID="ID_1633232455" MODIFIED="1592545038284" TEXT="command">
-<node CREATED="1592545039146" ID="ID_280546282" MODIFIED="1592545041223" TEXT="git config">
+<node CREATED="1604629796153" FOLDED="true" ID="ID_1324447139" MODIFIED="1604642957432" TEXT="git lifecycle">
+<node CREATED="1604629828311" ID="ID_1065193172" MODIFIED="1604632103558">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      git init
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git remote add origin git@192.168.2.3:/git-root/abc.git
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git branch --set-upstream-to=origin/master master
+    </p>
+    <p>
+      git pull origin master
+    </p>
+    <p>
+      git push -u origin master # -u --set-upstream
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git config --global user.name aa
+    </p>
+    <p>
+      git config --global user.email xx@mail.com
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git add .
+    </p>
+    <p>
+      git add main.cpp
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git log
+    </p>
+    <p>
+      git status
+    </p>
+    <p>
+      git diff commit_id1 commit_id2
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git reset --hard commit_id # reset assigned commit
+    </p>
+    <p>
+      git reset --hard HEAD
+    </p>
+    <p>
+      git reflog // search history reset
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1604632105364" FOLDED="true" ID="ID_851408478" MODIFIED="1604642958919" TEXT="git branch">
+<node CREATED="1604633611292" ID="ID_358302678" MODIFIED="1604633637488" TEXT="git branch lifecycle">
+<node CREATED="1604632328892" ID="ID_173425890" MODIFIED="1604633359007">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      git branch
+    </p>
+    <p>
+      git branch --all
+    </p>
+    <p>
+      git branch --verbose
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git branch dev
+    </p>
+    <p>
+      git branch
+    </p>
+    <p>
+      git checkout dev
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # modify a file, and git commit
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git checkout master
+    </p>
+    <p>
+      git merge master
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git branch --delete dev
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1604633642595" ID="ID_1807236965" MODIFIED="1604633651584" TEXT="conflict"/>
+</node>
+<node CREATED="1592545039146" FOLDED="true" ID="ID_280546282" MODIFIED="1604633603788" TEXT="git config">
 <node CREATED="1604546189978" ID="ID_473200135" MODIFIED="1604546193786" TEXT="https://www.bilibili.com/video/BV1Vv411C7gn?p=8"/>
 <node CREATED="1604546330429" ID="ID_1881247530" MODIFIED="1604546333930" TEXT="location">
 <node CREATED="1604546334977" ID="ID_366243872" MODIFIED="1604546341686" TEXT="/etc/gitconfig">
@@ -139,7 +276,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592547392325" ID="ID_648327124" MODIFIED="1592547394740" TEXT="git remote">
+<node CREATED="1592547392325" FOLDED="true" ID="ID_648327124" MODIFIED="1604633601278" TEXT="git remote">
 <node CREATED="1592547396392" ID="ID_1722671919" MODIFIED="1592547465539" TEXT="git remote [-v]">
 <node CREATED="1592547409578" ID="ID_779405579" MODIFIED="1592547422145" TEXT="-v | --verbose"/>
 </node>
@@ -187,7 +324,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1583934085158" FOLDED="true" ID="ID_1600407662" MODIFIED="1604545620097" TEXT="Pro Git book">
+<node CREATED="1604633535357" FOLDED="true" ID="ID_1293283188" MODIFIED="1604633605343" TEXT="others">
+<node CREATED="1583934085158" FOLDED="true" ID="ID_1600407662" MODIFIED="1604629769714" TEXT="Pro Git book">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -197,8 +335,7 @@
       https://git-scm.com/book/en/v2
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1583396140476" ID="ID_1556745953" MODIFIED="1604387601554" TEXT="2. Git Basics">
 <node CREATED="1583387551001" ID="ID_1300733150" MODIFIED="1586337882219" TEXT="2.1 Getting a Git Repository">
 <richcontent TYPE="NOTE"><html>
@@ -772,7 +909,9 @@
 </node>
 </node>
 </node>
+</node>
 <node CREATED="1592532004617" ID="ID_118719522" MODIFIED="1592532027121" POSITION="right" TEXT="github">
+<node CREATED="1604644992879" ID="ID_630554315" MODIFIED="1604645050347" TEXT="for person, not for company"/>
 <node CREATED="1592532132817" ID="ID_98337258" MODIFIED="1592532135470" TEXT="account">
 <node CREATED="1592532142113" ID="ID_178567121" MODIFIED="1592532186534">
 <richcontent TYPE="NODE"><html>

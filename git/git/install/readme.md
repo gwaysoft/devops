@@ -1,4 +1,4 @@
-##centos7
+## centos7 A -> centos7 B
 
 ### check git
     [root@k8s-node2 .ssh]# yum list installed | grep git
@@ -90,15 +90,9 @@
     origin	git@192.168.2.30:/git-root/bgm.git (push)
 
 
-## windows7
-### keygen
-    $ ssh-keygen -t rsa
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/c/Users/david.wei/.ssh/id_rsa):
-### copy id_rsa.pub to authorized_keys 
-    david.wei@CN01L0201000758 MINGW64 /d
-    [git@localhost bgm.git]$ cat /git-root/id_rsa.pub >> ~/.ssh/authorized_keys
-    
+## windows7 A -> centos7 B
+### ssh
+### git clone
     david.wei@CN01L0201000758 MINGW64 /d
     $ git clone git@192.168.2.30:/git-root/bgm.git
     Cloning into 'bgm'...
@@ -110,6 +104,64 @@
     remote: Compressing objects: 100% (8/8), done.
     remote: Total 16 (delta 0), reused 0 (delta 0)
     Receiving objects: 100% (16/16), done.
+
+### from git init
+    david.wei@CN01L0201000758 MINGW64 /d
+    $ rm -fr dd
+    
+    david.wei@CN01L0201000758 MINGW64 /d
+    $ mkdir cc
+    
+    david.wei@CN01L0201000758 MINGW64 /d
+    $ cd cc
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc
+    $ git init
+    Initialized empty Git repository in D:/cc/.git/
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git remote add origin git@192.168.2.30:/git-root/bgm.git
+
+#### git pull
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git branch --set-upstream-to=origin/master master
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git pull
+    Already up to date.
+
+#### git push    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ echo eee>>dd.d
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ ls
+    bb.t  dd.d  ff/  for.sh
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git add .
+    warning: LF will be replaced by CRLF in dd.d.
+    The file will have its original line endings in your working directory
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git commit -a -m 'ee'
+    [master 03b1d80] ee
+     1 file changed, 1 insertion(+)
+     create mode 100644 dd.d
+    
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ git push origin master
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    To 192.168.2.30:/git-root/bgm.git
+       3aebd0d..03b1d80  master -> master
+
+
 
 
 

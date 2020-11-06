@@ -5,6 +5,7 @@ systemctl disable firewalld
 # close selinux 文件权限
 sed -i 's/enforcing/disabled/' /etc/selinux/config
 setenforce 0
+# getenforce
 # 关闭swap：
 swapoff -a # 临时
 sed -i '$d' /etc/fstab # 永久
