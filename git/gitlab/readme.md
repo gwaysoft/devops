@@ -5,6 +5,8 @@ https://about.gitlab.com/install/#centos-7
 ## prerequisite
 
 ### policycoreutils-python
+    # yum list installed | grep curl
+    # yum list installed | grep openssh-server
     # sudo yum install -y curl policycoreutils-python openssh-server
     yum install policycoreutils-python
     # sudo systemctl enable sshd
@@ -24,7 +26,7 @@ https://about.gitlab.com/install/#centos-7
                ├─1275 pickup -l -t unix -u
                └─1276 qmgr -l -t unix -u
    
-### yum repository 
+### yum repository for gitlab-ce
     [root@localhost ~]# curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
@@ -38,11 +40,12 @@ https://about.gitlab.com/install/#centos-7
     Loaded plugins: fastestmirror
     Loading mirror speeds from cached hostfile
     
-
+### revise config file
     [root@localhost gitlab]# vi gitlab.rb 
     
     [root@localhost gitlab]# grep '^external_url' gitlab.rb 
     external_url 'http://192.168.2.50'
+    
 ## start
 ### gitlab-ctl reconfigure
     [root@localhost gitlab]# gitlab-ctl reconfigure
@@ -159,8 +162,8 @@ https://about.gitlab.com/install/#centos-7
     remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
     Receiving objects: 100% (3/3), done.
 
-### new branch dev
-#### add dev at gitlab webconsole
+### new branch dev 
+#### add dev at gitlab web console
 #### david.wei
     david.wei@CN01L0201000758 MINGW64 /d/tmp/ddd/test (master)
     $ git pull
@@ -242,8 +245,6 @@ https://about.gitlab.com/install/#centos-7
     To 192.168.2.50:dd-group/test.git
      * [new branch]      dev -> dev
 
-
- 
     
 #### tom.ka
 ##### git pull
@@ -329,11 +330,11 @@ https://about.gitlab.com/install/#centos-7
     user.name=tom.ka
     user.email=tom.ka@email.com
     
- ## set https
+## set https
     https://www.bilibili.com/video/BV1Vv411C7gn?p=12    12:00
 ## set smtp
     https://www.bilibili.com/video/BV1Vv411C7gn?p=12    12:30
- ## backup and recover
+## backup and recover
     https://www.bilibili.com/video/BV1Vv411C7gn?p=14    17:00  
     
     
