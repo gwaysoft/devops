@@ -15,9 +15,9 @@
      * updates: mirrors.bfsu.edu.cn
 
      
-## client -> server
+## client (root) -> server (git)
 ### prerequisite (keygen: client -> server)
-    os/centos7/install/keygen/readme.md
+    /os/centos7/install/keygen/readme.md
 ### server
 #### init (user: root)
     [git@localhost git-root]$ su root
@@ -90,7 +90,7 @@
     origin	git@192.168.2.30:/git-root/bgm.git (push)
 
 
-## windows7 A -> centos7 B
+## windows7 A -> centos7 B (git)
 ### ssh
 ### git clone
     david.wei@CN01L0201000758 MINGW64 /d

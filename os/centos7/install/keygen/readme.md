@@ -1,4 +1,4 @@
-## centos7 A -> centos7 B
+## centos7 A (root) -> centos7 B (root)
 ### A generate key
     [root@localhost ~]# ssh-keygen -t rsa
     Generating public/private rsa key pair.
@@ -33,8 +33,42 @@
 #### A make a known_hosts file
     [root@localhost .ssh]# ls
     id_rsa  id_rsa.pub  known_hosts
-
-
+    
+    
+## windows7 A (david.wei) -> centos7 B (git)
+### A keygen
+    $ ssh-keygen -t rsa
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/c/Users/david.wei/.ssh/id_rsa):
+### B copy id_rsa.pub to authorized_keys 
+#### add user
+    [root@localhost ~]# adduser add
+    [root@localhost ~]# passwd git
+#### su git    
+    [root@localhost .ssh]# su - git
+    Last login: Tue Nov 10 14:21:20 CST 2020 on pts/1
+    [git@localhost ~]$ cd .ssh/
+    [git@localhost .ssh]$ ls
+    authorized_keys
+#### scp id_rsa.pub to B (git)
+    [git@localhost bgm.git]$ cat /git-root/id_rsa.pub >> ~/.ssh/authorized_keys
+ 
+### A (david.wei)
+    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
+    $ ssh git@192.168.2.30
+    The authenticity of host '192.168.2.30 (192.168.2.30)' can't be established.
+    ECDSA key fingerprint is SHA256:WueJRXcy6Q1N55TRiJpIeUqQ9YHdtz0Bzu/htR5l0Bo.
+    Are you sure you want to continue connecting (yes/no)? yes
+    Warning: Permanently added '192.168.2.30' (ECDSA) to the list of known hosts.
+    
+    Last failed login: Wed Nov  4 15:07:34 CST 2020 from 192.168.2.72 on ssh:notty
+    There were 2 failed login attempts since the last successful login.
+    Last login: Wed Nov  4 11:59:07 2020
+    [git@localhost ~]$ ls
+    [git@localhost ~]$ ls /
+    bin   data  etc       home  lib64  mnt  proc  run   srv  tmp  var
+    boot  dev   git-root  lib   media  opt  root  sbin  sys  usr
+    
 ## trick
 ### reference
     https://blog.csdn.net/b108074013/article/details/48252809
@@ -63,30 +97,4 @@
 #### A make a known_hosts file
     [root@localhost .ssh]# ls
     id_rsa  id_rsa.pub  known_hosts
-    
-    
-## windows7 A -> centos7 B
-### A keygen
-    $ ssh-keygen -t rsa
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/c/Users/david.wei/.ssh/id_rsa):
-### B copy id_rsa.pub to authorized_keys 
-    david.wei@CN01L0201000758 MINGW64 /d
-    [git@localhost bgm.git]$ cat /git-root/id_rsa.pub >> ~/.ssh/authorized_keys
- 
-### A
-    david.wei@CN01L0201000758 MINGW64 /d/cc (master)
-    $ ssh git@192.168.2.30
-    The authenticity of host '192.168.2.30 (192.168.2.30)' can't be established.
-    ECDSA key fingerprint is SHA256:WueJRXcy6Q1N55TRiJpIeUqQ9YHdtz0Bzu/htR5l0Bo.
-    Are you sure you want to continue connecting (yes/no)? yes
-    Warning: Permanently added '192.168.2.30' (ECDSA) to the list of known hosts.
-    
-    Last failed login: Wed Nov  4 15:07:34 CST 2020 from 192.168.2.72 on ssh:notty
-    There were 2 failed login attempts since the last successful login.
-    Last login: Wed Nov  4 11:59:07 2020
-    [git@localhost ~]$ ls
-    [git@localhost ~]$ ls /
-    bin   data  etc       home  lib64  mnt  proc  run   srv  tmp  var
-    boot  dev   git-root  lib   media  opt  root  sbin  sys  usr
 
