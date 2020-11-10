@@ -139,17 +139,16 @@
     https://www.bilibili.com/video/BV1Vv411C7gn?p=24 4:00
     
 ### configure
-#### config jdk, git, maven
-    # Manage Jenkins -> Global Tool Configuration
-    
-    
+#### Global Tool Configuration, config jdk, git, maven
+    # Manage Jenkins -> System Configuration -> Global Tool Configuration
 ##### jdk
     # yum install java
     JAVA_HOME: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64
     
 ##### git
-    [root@localhost ~]# git --version
-    git version 1.8.3.1
+    [root@localhost jenkins]# which git
+    Path to Git executable: /bin/git
+
     
 ##### maven
     MAVEN_HOME: /usr/share/maven
@@ -161,8 +160,18 @@
     Default locale: en_US, platform encoding: UTF-8
     OS name: "linux", version: "3.10.0-1127.el7.x86_64", arch: "amd64", family: "unix"
     
+    
+#### create user, Manage Jenkins -> Security -> Manage Users
+    david | 111111Say
+    admin | admin123
+    
+#### view Jenkins URL, Manage Jenkins -> System Configuration -> Configure System -> Jenkins location
+    Jenkins URL: http://192.168.2.30:8080/
+    
+    
+### plugins, Manage Jenkins -> System Configuration -> Manage Plugins
 #### change update center
-    # Manage Jenkins -> Plugin Manager -> Advanced -> Update Site
+    # Manage Jenkins -> System Configuration -> Plugin Manager -> Advanced -> Update Site
     https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json
     
     # as same as to revise
@@ -174,6 +183,20 @@
         <url>https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</url>
       </site>
     </sites>
+#### install authorization plugins 
+    # Avaiable tag, search, select
+    Role-based Authorization Strategy
+    Authorize Project
+    # press [Install without restart]
+##### configure authorization plugins
+    # Manage Jenkins -> Security -> Configure Global Security -> Authorization -> Strategy
+    Role-Based Strategy
+    # Save
+
+
+    
+    
+
     
 
 
