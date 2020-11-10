@@ -34,7 +34,8 @@
     success
     [root@localhost nexus-3.28.1-01]# systemctl restart firewalld
 
-### http://192.168.2.30:8081/    
+### open browser
+    http://192.168.2.30:8081/    
 #### get init password for admin    
     [root@localhost nexus-3.28.1-01]# cat /root/sonatype-work/nexus3/admin.password
     990ff2d2-b725-40a7-90d4-95774af44781
