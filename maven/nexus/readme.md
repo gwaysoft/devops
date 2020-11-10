@@ -1,4 +1,5 @@
 ## reference
+    https://www.bilibili.com/video/BV1VT4y1L7f5
     https://www.bilibili.com/video/BV1Vv411C7gn?p=16
     
 ## install 
@@ -36,7 +37,7 @@
 
 ### open browser
     http://192.168.2.30:8081/    
-#### get init password for admin    
+#### get init password for admin respectively
     [root@localhost nexus-3.28.1-01]# cat /root/sonatype-work/nexus3/admin.password
     990ff2d2-b725-40a7-90d4-95774af44781
     admin | admin123
