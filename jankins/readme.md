@@ -2,7 +2,7 @@
     https://www.bilibili.com/video/BV1Vv411C7gn?p=24
     https://www.jenkins.io/download/
     
-##* docker
+## * docker
     https://github.com/jenkinsci/docker/blob/master/README.md
     https://www.cnblogs.com/burningmyself/p/12099243.html
     
@@ -15,7 +15,7 @@
     
     cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
     
-##* centos7
+## * centos7
 ### install
     https://pkg.jenkins.io/redhat-stable/
     
