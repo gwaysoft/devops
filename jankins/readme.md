@@ -1,4 +1,4 @@
-## reference
+## * reference
     https://www.bilibili.com/video/BV1Vv411C7gn?p=24
     https://www.jenkins.io/download/
     
@@ -129,7 +129,7 @@
     2020-11-10 07:23:25.612+0000 [id=40]	INFO	hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
     2020-11-10 07:23:25.616+0000 [id=40]	INFO	hudson.model.AsyncPeriodicWork#lambda$doRun$0: Finished Download metadata. 48,368 ms
     
-##* jenkins web console
+## * jenkins web console
 ### login web console
     http://192.168.2.30:8080/
     [root@localhost ~]# cat /var/lib/jenkins/secrets/initialAdminPassword
