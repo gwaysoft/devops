@@ -1,0 +1,9 @@
+{
+    "Endpoints":[
+        "http://192.168.2.72:30010/"
+    ],
+    "Username":"",
+    "Password":"",
+    "#DialTimeout":"单位秒",
+    "DialTimeout": 2
+}

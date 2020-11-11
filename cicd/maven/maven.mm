@@ -1,0 +1,93 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1604905437288" ID="ID_548072207" MODIFIED="1604905446649" TEXT="maven">
+<node CREATED="1604904986842" ID="ID_890695463" MODIFIED="1604904990038" POSITION="right" TEXT="nexus">
+<node CREATED="1604905624459" ID="ID_1217145460" MODIFIED="1604905633736" TEXT="overview">
+<node CREATED="1604905599086" ID="ID_1118180830" MODIFIED="1604905620237">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="pictures/overview.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1604905321196" ID="ID_942442942" MODIFIED="1604905324674" TEXT="introduce">
+<node CREATED="1604905068982" ID="ID_685198726" MODIFIED="1604905277562" TEXT="private repository for jar"/>
+<node CREATED="1604905328660" ID="ID_232302760" MODIFIED="1604905378183" TEXT="if not nexus, deploy jar for project  manually"/>
+</node>
+<node CREATED="1604911272596" ID="ID_1744840935" MODIFIED="1604911275178" TEXT="install">
+<node CREATED="1604911275178" ID="ID_462874295" MODIFIED="1604911287821" TEXT="/maven/nexus/readme.md"/>
+</node>
+<node CREATED="1604911291300" ID="ID_554542078" MODIFIED="1604911671189" TEXT="usage">
+<node CREATED="1604911671190" ID="ID_126357171" MODIFIED="1604911685677" TEXT="repositories">
+<node CREATED="1604911685677" ID="ID_24600116" MODIFIED="1604911689733" TEXT="type">
+<node CREATED="1604911689734" FOLDED="true" ID="ID_1057660930" MODIFIED="1604911710094" TEXT="proxy">
+<node CREATED="1604911695158" ID="ID_646464497" MODIFIED="1604911706986">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="pictures/nexus-reposiories-proxy.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1604911970550" FOLDED="true" ID="ID_673251056" MODIFIED="1604912271676" TEXT="group">
+<node CREATED="1604911974470" ID="ID_1382248524" MODIFIED="1604911981228">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="pictures/nexus-reposiories-group.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1604912000124" ID="ID_142850197" MODIFIED="1604912072709" TEXT="hosted (local)">
+<node CREATED="1604912169633" ID="ID_1567147710" MODIFIED="1604912183285" TEXT="default repositories">
+<node CREATED="1604912016154" ID="ID_1784143002" MODIFIED="1604912027459" TEXT="maven-releases">
+<node CREATED="1604912049961" ID="ID_1362126481" MODIFIED="1604912128272" TEXT="release version jar">
+<node CREATED="1604912139794" ID="ID_1832174699" MODIFIED="1604912148064" TEXT="&#x7a33;&#x5b9a;&#x7248;"/>
+</node>
+</node>
+<node CREATED="1604912031006" ID="ID_1668638371" MODIFIED="1604912044978" TEXT="maven-snapshots">
+<node CREATED="1604912063913" ID="ID_1528056467" MODIFIED="1604912138431" TEXT="snapshot version jar">
+<node CREATED="1604912149634" ID="ID_1695270026" MODIFIED="1604912151630" TEXT="&#x6d4b;&#x8bd5;&#x7248;"/>
+</node>
+</node>
+</node>
+<node CREATED="1604912194761" ID="ID_1796427235" MODIFIED="1604912237047" TEXT="&#x53ef;&#x4ee5;deploy&#x5230;hosted&#x91cc;&#xff0c;&#x4e5f;&#x53ef;&#x4ee5;&#x624b;&#x5de5;&#x6dfb;&#x52a0;&#x5230;hosted&#x91cc;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1604905106647" ID="ID_943969751" MODIFIED="1604905109452" POSITION="right" TEXT="basic">
+<node CREATED="1604905110423" ID="ID_1402400565" MODIFIED="1604905115581" TEXT="introduce">
+<node CREATED="1604904996927" ID="ID_1549112204" MODIFIED="1604905021957" TEXT="write by java"/>
+<node CREATED="1604905125320" ID="ID_1844373243" MODIFIED="1604905129196" TEXT="pom"/>
+<node CREATED="1604905135903" ID="ID_1982846494" MODIFIED="1604905173893" TEXT="clean, build, test, build, deploy"/>
+<node CREATED="1604905187707" ID="ID_1487453672" MODIFIED="1604905207704" TEXT="apache all of java project -&gt; maven management"/>
+<node CREATED="1604905218077" ID="ID_1406706495" MODIFIED="1604905222841" TEXT="maven plugin"/>
+<node CREATED="1604905253824" ID="ID_1189090281" MODIFIED="1604905259505" TEXT="compare with ant"/>
+</node>
+<node CREATED="1604905722884" ID="ID_290617245" MODIFIED="1604905729597" TEXT="install">
+<node CREATED="1604905729598" ID="ID_314515014" MODIFIED="1604905741533" TEXT="centos">
+<node CREATED="1604906174578" ID="ID_1768982783" MODIFIED="1604906186115" TEXT="best practice">
+<node CREATED="1604906187097" ID="ID_350459441" MODIFIED="1604906196585" TEXT="yum install maven">
+<node CREATED="1604906225228" ID="ID_370869995" MODIFIED="1604906266697" TEXT="install jdk too"/>
+</node>
+</node>
+<node CREATED="1604905733454" ID="ID_1615827921" MODIFIED="1604906216467" TEXT="https://www.bilibili.com/video/BV1Vv411C7gn?p=17"/>
+</node>
+</node>
+</node>
+</node>
+</map>
