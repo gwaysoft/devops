@@ -175,6 +175,15 @@
     https://docs.docker.com/engine/reference/commandline/login/#credentials-store
     
     Login Succeeded
+    
+    [root@localhost ~]# docker login -u david.wei -p 111111Say 192.168.2.30
+    WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+    WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+    Configure a credential helper to remove this warning. See
+    https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+    
+    Login Succeeded
+
 
 #### check   
     [root@localhost ~]# docker push 192.168.2.30/jenkins/nginx210:v0.0.2

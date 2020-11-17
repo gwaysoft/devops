@@ -241,8 +241,7 @@
 
      99 ## Allow root to run any commands anywhere
     100 root    ALL=(ALL)       ALL
-    101 jenkins ALL=(root)      NOPASSWD: /usr/bin/docker
-    102 Defaults:jenkins !requiretty
+    101 jenkins ALL=(ALL)       NOPASSWD:ALL
 
 ### credential
     https://www.bilibili.com/video/BV1Vv411C7gn?p=36
