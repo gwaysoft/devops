@@ -29,16 +29,33 @@
     Connected to 192.168.2.30.
     Escape character is '^]'.
     
-#### account 
-    root | 111111Say
-    
-###
+### configure
     cat >> /data/gitlab/config/gitlab.rb << eof
     # keng must equal container's port
     external_url 'http://192.168.2.30:80'
     gitlab_rails['gitlab_ssh_host'] = '192.168.2.30'
     gitlab_rails['gitlab_shell_ssh_port'] = 222
     eof
+    
+### http://192.168.2.30:3080/
+    
+#### account 
+    root | 111111Say
+    david.wei | 111111Say
+    
+### other operation to view ../readme.md
+
+### clone with http
+    [root@localhost ~]# git clone http://192.168.2.30:3080/dgroup/fproject.git
+    Cloning into 'fproject'...
+    Username for 'http://192.168.2.30:3080': david.wei            
+    Password for 'http://david.wei@192.168.2.30:3080': 
+    remote: Enumerating objects: 9, done.
+    remote: Counting objects: 100% (9/9), done.
+    remote: Compressing objects: 100% (3/3), done.
+    remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (9/9), done.
+
 
     
 

@@ -8,7 +8,7 @@
     https://github.com/jenkinsci/docker/blob/master/README.md
     https://www.cnblogs.com/burningmyself/p/12099243.html
 
-    docker run -p 8080:8080 -p 50000:5000 --name jenkins \
+    docker run -p 3080:8080 -p 50000:5000 --name jenkins \
     -u root \
     -v /etc/localtime:/etc/localtime \
     -v /data/jenkins:/var/jenkins_home \
@@ -16,6 +16,7 @@
     -d jenkins/jenkins:lts
     
     cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
+    admin | admin
 ```    
 - ## centos7
 ### install
@@ -23,6 +24,8 @@
     
     sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
     sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    
+    # if not java, install java automatically
     yum install jenkins
 ##### check
     [root@localhost ~]# rpm -ql jenkins
@@ -36,8 +39,13 @@
     /var/lib/jenkins                # project directory
     /var/log/jenkins                # log directory
 ##### tips
-    # if have not java
+    # install java manually
     yum install java 
+    [root@localhost ~]# java -version
+    openjdk version "1.8.0_262"
+    OpenJDK Runtime Environment (build 1.8.0_262-b10)
+    OpenJDK 64-Bit Server VM (build 25.262-b10, mixed mode)
+
 
 ### configuration
 #### /etc/sysconfig/jenkins
@@ -89,6 +97,8 @@
 
 ### startup
     [root@localhost ~]# systemctl start jenkins
+    
+    [root@localhost jenkins]# systemctl restart jenkins
     
 #### check
     [root@localhost ~]# netstat -lnpt
@@ -171,7 +181,31 @@
     
     
 ### plugins, Manage Jenkins -> System Configuration -> Manage Plugins
-#### change update center
+
+#### install plugins  manually, notice the match jenkins version and plugin version 
+##### install [Maven Integration] and [SSH]
+    # search [Maven Integration] or click failure of plugin link
+    https://plugins.jenkins.io/
+
+    # Manage Jenkins -> System Configuration -> Manage Plugins -> Advanced -> Upload Plugin
+    # Failure
+    java.io.IOException: Failed to load: Maven Integration plugin (3.8)
+     - Plugin is missing: javadoc (1.0)
+        at hudson.PluginWrapper.resolvePluginDependencies(PluginWrapper.java:952)
+        at hudson.PluginManager.dynamicLoad(PluginManager.java:932)
+    Caused: java.io.IOException: Failed to install maven-plugin plugin
+    
+    # troubleshotting
+    # search [Javadoc], download, and upload javadoc, successfull
+    https://plugins.jenkins.io/
+    
+    # select bottom of the page, and restart
+    Restart Jenkins when installation is complete and no jobs are running
+    
+    ## search [SSH], download, and upload ssh, successfull
+    https://plugins.jenkins.io/
+    
+#### change update center automatically (failure)
     # Advanced -> Update Site
     https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json
     
@@ -184,19 +218,48 @@
         <url>https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</url>
       </site>
     </sites>
-#### install authorization plugins 
+    
+    [root@localhost plugins]# vi /var/lib/jenkins/updates/default.json -> www.baidu.com
+    
+#### install authorization plugins
     # Avaiable tag, search, select
     Role-based Authorization Strategy
     Authorize Project
     # press [Install without restart]
+    
 ##### configure authorization plugins, Manage Jenkins -> Security -> Configure Global Security
     # Authorization -> Strategy
     Role-Based Strategy
     # Save
     # select option [Logged-in users can do anything], any user have all of permissions
     
-### configure role, Jenkins -> Security -> Manage and Assign Roles
+##### configure role, Jenkins -> Security -> Manage and Assign Roles
     https://www.bilibili.com/video/BV1Vv411C7gn?p=28
+    
+##### permission 
+    [root@localhost ~]# visudo
+
+     99 ## Allow root to run any commands anywhere
+    100 root    ALL=(ALL)       ALL
+    101 jenkins ALL=(root)      NOPASSWD: /usr/bin/docker
+    102 Defaults:jenkins !requiretty
+
+### credential
+    https://www.bilibili.com/video/BV1Vv411C7gn?p=36
+#### configure credential,, admin (user, right and top corner) -> Credentials
+    # add domain
+    # add credential
+#### configure remote machine (install SSH plugin first), Manage Jenkins -> System Configuration -> Configure System -> SSH remote hosts
+    # add SSH
+    hostname: 192.168.2.210
+    port: 22
+    credential: (select credentials)
+    # check -> successfull connection
+### create item maven
+    JENKINS_HOME='/var/lib/jenkins/'
+
+
+
 
 
     

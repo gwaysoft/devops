@@ -115,7 +115,7 @@ https://about.gitlab.com/install/#centos-7
 ### add user and email
     david.way | 111111Say | david.wei@ebaotech.com
     tom.ka | 111111Say | weifei.shen@ebaotech.com
-#### add Setting -> SSH keys
+#### add SSH Keys, user logo (top right corner) -> Setting -> SSH keys
 ##### copy id_rsa.pub to SSH Keys to david.way and tom.ka respectively
     # 192.168.2.2 (windows7) id_rsa.pub -> tom.ka
     # 192.168.2.70 (centos7) id_rsa.pub -> david.way
