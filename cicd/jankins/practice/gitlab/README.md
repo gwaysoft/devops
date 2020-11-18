@@ -37,9 +37,10 @@
 ### configure item with [Add post-build step] to push image to harbor 
 #### check Dockerfile
 ##### view docker/practice/tomcat
-    docker pull tomcat:8.0.36-alpine 
+    [root@localhost ~]# docker pull tomcat:8.0.36-alpine 
     
-    [root@localhost docker-file]# docker build -t mytomcat:1.1 .
+    # Keng, Dockerfile context must add, if command [docker build] is not as same as directory with Dockerfile  
+    [root@localhost ~]# docker build -t mytomcat:1.1 /root/jenkins/docker-file
     Sending build context to Docker daemon  4.792MB
     Step 1/7 : FROM tomcat:8.0.36-alpine
      ---> 5c1227565652
@@ -66,10 +67,43 @@
 #### log
     console_output_post-build-push.log
     
-    
-#### pull image to remote machine: post-build-pull.sh
+### configure item with [Add post-build step] to pull image on remote host using ssh     
+#### test post-build-pull.sh
+##### create new item -> Freestyle project
+    Build
+    Add build step: [Execute shell script on remote host using ssh]
+    SSH site: root@192.168.2.210:22
+    copy post-build-pull.sh to [Execute shell script on remote host using ssh]
+##### log
+    console_output_post-build-pull_free.log
+#### configure
+    Post Steps
+    Run only if build succeeds
+    Add post-build step: [Execute shell script on remote host using ssh]
+    SSH site: root@192.168.2.210:22
+    copy post-build-pull.sh to [Execute shell script on remote host using ssh]
+#### Build Now
+#### log
+    console_output.log
 
-
-###### install plugins (?)
+## git pull, then build automatically
+### jenkins
+#### install plugins
     GitLab
     Gitlab Hook
+#### Configure
+    Build Triggers
+    Build when a change is pushed to GitLab. GitLab webhook URL: http://192.168.2.30:8080/project/maven-docker
+        http://192.168.2.30:8080/project/maven-docker
+    Advanced.. -> Generate -> Secret token 
+        cbb7377d5cd908a3de6042d0e25e508b
+### gitlab
+#### login with admin, Admin Area -> Settings -> Network -> Outbound requests, select
+    Allow requests to the local network from web hooks and services
+#### login with david.wei, Projects -> Fproject -> Settings -> Webhooks
+    URL: http://192.168.2.30:8080/project/maven-docker
+    Secret Token: cbb7377d5cd908a3de6042d0e25e508b
+    press, [Add webhook]
+    Test -> Push events
+### test 
+    git clone the relevant *.git, vi, commit, push, then jenkins will build automatically 

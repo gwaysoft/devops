@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
 # environment
-JENKINS_WAR_HOME='/var/lib/jenkins/workspace/maven-docker/target'
-DOCKERFILE_HOME='/root/jenkins/docker-file'
-HARBOR_IP='192.168.2.30:80'
-REPOSITORIES='gjenkins/maven-docker-test'
+HARBOR_IP='192.168.2.30'
 HARBOR_USER='david.wei'
 HARBOR_USER_PASSWD='111111Say'
+HARBOR_PROJECT='gjenkins'
+HARBOR_REPOSITORIES='maven-docker-test'
+REPOSITORIES=${HARBOR_PROJECT}/${HARBOR_REPOSITORIES}
 
-# delete previous images
-IMAGE_ID=`sudo docker images | grep ${REPOSITORIES} | awk '{print $3}'`
-if [ -n "${IMAGE_ID}" ];then
-  sudo docker rmi -f ${IMAGE_ID}
+# stop container, and delete container
+CONTAINER_ID=$(sudo docker ps | grep ${HARBOR_REPOSITORIES} | awk '{print $1}')
+if [ -n "${CONTAINER_ID}" ]; then
+  sudo docker shop "${CONTAINER_ID}"
+  sudo docker rm -f "$CONTAINER_ID"
+else
+  CONTAINER_ID=$(sudo docker ps -a | grep ${HARBOR_REPOSITORIES} | awk '{print $1}')
+  if [ -n "${CONTAINER_ID}" ]; then
+    sudo docker rm -f "$CONTAINER_ID"
+  fi
 fi
 
-# copy
-sudo cp -f ${JENKINS_WAR_HOME}/easy-springmvc-maven.war ${DOCKERFILE_HOME}/easy-springmvc-maven.war
+# delete previous images
+IMAGE_ID=$(sudo docker images | grep ${REPOSITORIES} | awk '{print $3}')
+if [ -n "${IMAGE_ID}" ]; then
+  sudo docker rmi -f "${IMAGE_ID}"
+fi
 
-# build image
-cd ${DOCKERFILE_HOME}
-TAG=`date +%Y%m%d-%H%M%S`
-#sudo docker build -t ${HARBOR_IP}/${REPOSITORIES}:${TAG} . &>/dev/null
-sudo docker build -t ${HARBOR_IP}/${REPOSITORIES}:${TAG} .
+# login harbor
+#sudo docker login -u ${HARBOR_USER} -p ${HARBOR_USER_PASSWD} ${HARBOR_IP}
+#sleep 5
+
+# pull images from harbor
+TAG=$(curl -X GET "http://192.168.2.30/api/v2.0/projects/gjenkins/repositories/maven-docker-test/artifacts?page=1&page_size=1&with_tag=true&with_label=false&with_scan_overview=false&with_signature=false&with_immutable_status=false" -H "accept: application/json" | jq '.[].tags[0].name' | awk -F '"' '{print $2}')
+
+# pull
+sudo docker pull ${HARBOR_IP}/${REPOSITORIES}:"${TAG}"
+echo ""
 sudo docker images | grep ${REPOSITORIES}
 
-# push image to harbor
-sudo docker login -u ${HARBOR_USER} -p ${HARBOR_USER_PASSWD} ${HARBOR_IP}
-sleep 5
-sudo docker push ${HARBOR_IP}/${REPOSITORIES}:${TAG}
+sudo docker run -d --name ${HARBOR_REPOSITORIES} -p 8888:8080 ${HARBOR_IP}/${REPOSITORIES}:"${TAG}"
+
+sleep 8
+sudo curl -X GET 'http://192.168.2.210:8888/easy-springmvc-maven/'
