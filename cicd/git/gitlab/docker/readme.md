@@ -17,7 +17,7 @@
       --volume /data/gitlab/data:/var/opt/gitlab \
       gitlab/gitlab-ce:latest
       
-    docker logs -f fd
+    docker logs -f fd # container_id
     
     [root@localhost config]# firewall-cmd --zone=public --add-port=3080/tcp --permanent
     success
