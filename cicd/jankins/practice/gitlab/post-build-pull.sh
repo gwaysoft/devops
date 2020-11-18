@@ -30,6 +30,7 @@ fi
 #sleep 5
 
 # pull images from harbor
+# yum install jq
 TAG=$(curl -X GET "http://192.168.2.30/api/v2.0/projects/gjenkins/repositories/maven-docker-test/artifacts?page=1&page_size=1&with_tag=true&with_label=false&with_scan_overview=false&with_signature=false&with_immutable_status=false" -H "accept: application/json" | jq '.[].tags[0].name' | awk -F '"' '{print $2}')
 
 # pull
@@ -38,6 +39,7 @@ echo ""
 sudo docker images | grep ${REPOSITORIES}
 
 sudo docker run -d --name ${HARBOR_REPOSITORIES} -p 8888:8080 ${HARBOR_IP}/${REPOSITORIES}:"${TAG}"
+# sudo kubectl set image
 
 sleep 8
 sudo curl -X GET 'http://192.168.2.210:8888/easy-springmvc-maven/'

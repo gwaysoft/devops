@@ -69,12 +69,19 @@
     
 ### configure item with [Add post-build step] to pull image on remote host using ssh     
 #### test post-build-pull.sh
+##### yum jq for parse json
+    yum install epel-release
+    yum list jq
+    yum install jq
 ##### create new item -> Freestyle project
     Build
     Add build step: [Execute shell script on remote host using ssh]
     SSH site: root@192.168.2.210:22
-    copy post-build-pull.sh to [Execute shell script on remote host using ssh]
-##### log
+    # scp post-build-pull.sh root@192.168.2.210:/root/post-build-pull.sh 
+    Command
+        #!/usr/bin/env bash
+        sudo /root/post-build-pull.sh
+##### Build now, view console output
     console_output_post-build-pull_free.log
 #### configure
     Post Steps
