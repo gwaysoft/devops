@@ -1,4 +1,8 @@
+```text
 https://about.gitlab.com/install/#centos-7
+https://docs.gitlab.com/ee/README.html (search, official)
+http://www.tutorialspoint.com/gitlab/gitlab_fork_project.htm
+```
 
 ## keng
     ee -> ce
