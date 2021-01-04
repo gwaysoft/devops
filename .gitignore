@@ -2,6 +2,7 @@
 .idea
 *.gz
 *.hpi
+backup
 
 # Logs
 logs
