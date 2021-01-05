@@ -132,7 +132,7 @@
 </node>
 </node>
 <node CREATED="1551775063659" ID="ID_1384244475" MODIFIED="1583927938474" POSITION="left" TEXT="freemind">
-<node CREATED="1583927842675" ID="ID_136939698" MODIFIED="1583927941735" TEXT="prerequisite">
+<node CREATED="1583927842675" ID="ID_136939698" MODIFIED="1609752357090" TEXT="prerequisite">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -153,7 +153,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1583927600610" ID="ID_1434703448" MODIFIED="1583927760643" TEXT="setup">
+<node CREATED="1583927600610" ID="ID_1434703448" MODIFIED="1609754689063" TEXT="setup">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -169,7 +169,8 @@
       javahome=E:\project\java\jdk-8u201
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 <node CREATED="1553246255453" ID="ID_1015784503" MODIFIED="1591236874153" POSITION="right" TEXT="postman">
